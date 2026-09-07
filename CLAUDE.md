@@ -117,9 +117,14 @@ duplicating logic.
 
 ## Open items to fill in as the project develops
 
-- [ ] Package manager choice
-- [ ] Design direction / visual style (WCAG-compliant, obviously — this
-      site should itself be a good accessibility example)
-- [ ] Exact list of source sites for the nightly news search
-- [ ] Whether `@nuxt/content` reads the JSON files directly or a simple
-      `useFetch`/server route is used instead
+- [x] Package manager choice — npm
+- [x] Design direction / visual style — Tailwind v4, palette/type loosely
+      based on etsi.org (navy/blue gradient, "Space Grotesk" self-hosted
+      via `@nuxt/fonts`)
+- [ ] Exact list of source sites for the nightly news search — currently
+      left to the model's judgement (EU WAD monitoring/enforcement bodies,
+      courts, ombudsman offices, EDF); tighten with named domains if the
+      nightly job surfaces too much noise or misses known sources
+- [x] Whether `@nuxt/content` reads the JSON files directly or a simple
+      `useFetch`/server route is used instead — server routes
+      (`/api/news`, `/api/timeline`)

@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* Palette loosely based on etsi.org */
+  --color-navy: #050557;
+  --color-primary: #0032c8;
+  --color-primary-light: #3257dc;
+  --color-secondary: #2270aa;
+  --color-tint: #e5eaf9;
+  --color-surface: #f8f8f8;
+  --color-surface-alt: #f4f4f4;
+  --color-border: #e4e7eb;
+  --color-ink: #000000;
+  --color-muted: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+  }
+
+  a {
+    @apply decoration-1 underline-offset-2;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-primary bg-primary px-5 py-2.5 font-medium text-white transition-colors hover:border-primary-light hover:bg-primary-light;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-white px-5 py-2.5 font-medium text-white transition-colors hover:bg-white hover:text-primary;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-primary px-5 py-2.5 font-medium text-primary transition-colors hover:bg-primary hover:text-white;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-full bg-tint px-3 py-1 text-sm font-medium text-navy;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-white p-6 shadow-sm;
+  }
+
+  .prose-content {
+    @apply max-w-3xl text-ink;
+  }
+
+  .prose-content h1 {
+    @apply mb-6 text-4xl font-light text-navy;
+  }
+
+  .prose-content h2 {
+    @apply mt-10 mb-4 text-2xl font-medium text-navy;
+  }
+
+  .prose-content h3 {
+    @apply mt-8 mb-3 text-xl font-medium text-navy;
+  }
+
+  .prose-content p {
+    @apply mb-4 leading-relaxed text-muted;
+  }
+
+  .prose-content ul {
+    @apply mb-4 ml-6 list-disc space-y-2 text-muted;
+  }
+
+  .prose-content ol {
+    @apply mb-4 ml-6 list-decimal space-y-2 text-muted;
+  }
+
+  .prose-content :where(p, li) a {
+    @apply text-primary underline decoration-primary/40 hover:decoration-primary;
+  }
+
+  .prose-content :where(h1, h2, h3) a {
+    @apply text-inherit no-underline;
+  }
+
+  .prose-content strong {
+    @apply font-semibold text-ink;
+  }
+}
