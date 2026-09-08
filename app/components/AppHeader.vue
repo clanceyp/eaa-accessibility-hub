@@ -13,16 +13,24 @@ const open = ref(false)
         <span>EAA Accessibility Hub</span>
       </NuxtLink>
 
-      <nav aria-label="Primary" class="hidden items-center gap-6 md:flex">
-        <NuxtLink to="/" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
-          News
-        </NuxtLink>
-        <NuxtLink to="/en301549" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
-          Overview
-        </NuxtLink>
-        <NuxtLink to="/timeline" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
-          Timeline
-        </NuxtLink>
+      <nav aria-label="Primary navigation" class="hidden md:block">
+        <ul class="flex items-center gap-6">
+          <li>
+            <NuxtLink to="/" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium underline underline-offset-4">
+              News
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/en301549" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium underline underline-offset-4">
+              Overview
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/timeline" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium underline underline-offset-4">
+              Timeline
+            </NuxtLink>
+          </li>
+        </ul>
       </nav>
 
       <button
@@ -42,18 +50,26 @@ const open = ref(false)
     <nav
       v-if="open"
       id="mobile-nav"
-      aria-label="Primary"
-      class="flex flex-col gap-1 border-t border-border px-6 py-3 md:hidden"
+      aria-label="Primary navigation"
+      class="border-t border-border px-6 py-3 md:hidden"
     >
-      <NuxtLink to="/" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
-        News
-      </NuxtLink>
-      <NuxtLink to="/en301549" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
-        Overview
-      </NuxtLink>
-      <NuxtLink to="/timeline" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
-        Timeline
-      </NuxtLink>
+      <ul class="flex flex-col gap-1">
+        <li>
+          <NuxtLink to="/" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" active-class="text-primary font-medium underline underline-offset-4" @click="open = false">
+            News
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/en301549" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" active-class="text-primary font-medium underline underline-offset-4" @click="open = false">
+            Overview
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/timeline" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" active-class="text-primary font-medium underline underline-offset-4" @click="open = false">
+            Timeline
+          </NuxtLink>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
