@@ -4,7 +4,7 @@ const year = new Date().getFullYear()
 
 <template>
   <footer class="bg-navy text-white">
-    <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-3">
+    <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.2fr_2fr_1fr]">
       <div>
         <p class="text-lg font-semibold">
           EAA Accessibility Hub
@@ -20,10 +20,21 @@ const year = new Date().getFullYear()
         <p class="text-sm font-medium text-white/60">
           Site
         </p>
-        <ul class="mt-3 space-y-2 text-sm">
+        <ul class="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-3">
           <li><NuxtLink to="/" class="text-white no-underline hover:underline">News</NuxtLink></li>
           <li><NuxtLink to="/en301549" class="text-white no-underline hover:underline">Overview</NuxtLink></li>
           <li><NuxtLink to="/timeline" class="text-white no-underline hover:underline">Timeline</NuxtLink></li>
+          <li><NuxtLink to="/en301549/web" class="text-white no-underline hover:underline">Web</NuxtLink></li>
+          <li><NuxtLink to="/en301549/non-web" class="text-white no-underline hover:underline">Non-web</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-5" class="text-white no-underline hover:underline">Clause 5</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-6" class="text-white no-underline hover:underline">Clause 6</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-7" class="text-white no-underline hover:underline">Clause 7</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-8" class="text-white no-underline hover:underline">Clause 8</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-9" class="text-white no-underline hover:underline">Clause 9</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-10" class="text-white no-underline hover:underline">Clause 10</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-11" class="text-white no-underline hover:underline">Clause 11</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-12" class="text-white no-underline hover:underline">Clause 12</NuxtLink></li>
+          <li><NuxtLink to="/en301549/clause-13" class="text-white no-underline hover:underline">Clause 13</NuxtLink></li>
         </ul>
       </nav>
 
