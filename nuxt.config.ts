@@ -21,7 +21,10 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      htmlAttrs: { lang: 'en' }
+      htmlAttrs: { lang: 'en' },
+      link: [
+        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }
+      ]
     }
   }
 })

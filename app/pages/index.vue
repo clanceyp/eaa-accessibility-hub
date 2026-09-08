@@ -10,9 +10,10 @@ useHead({
 
 <template>
   <div>
-    <section class="bg-gradient-to-br from-navy to-primary text-white">
-      <div class="mx-auto max-w-6xl px-6 py-20">
-        <h1 class="max-w-2xl text-5xl font-light leading-tight">
+    <section class="relative overflow-hidden bg-gradient-to-br from-navy to-primary text-white">
+      <HeroMapBackground />
+      <div class="relative z-10 mx-auto max-w-6xl px-6 py-20">
+        <h1 class="max-w-2xl text-5xl font-light leading-tight text-pretty">
           Accessibility law, in one place
         </h1>
         <p class="mt-6 max-w-xl text-lg text-white/85">
