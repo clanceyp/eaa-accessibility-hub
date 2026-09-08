@@ -7,7 +7,7 @@
   --color-navy: #050557;
   --color-primary: #0032c8;
   --color-primary-light: #3257dc;
-  --color-secondary: #2270aa;
+  --color-secondary: #1a5480;
   --color-tint: #e5eaf9;
   --color-surface: #f8f8f8;
   --color-surface-alt: #f4f4f4;
@@ -20,10 +20,14 @@
  * Utility that puts the EU line-map SVG on whatever element carries it —
  * size/position/effects are left to the usual bg-* utilities on the same
  * element, and it composes with variants (e.g. md:bg-img-eu-linemap).
+ rgba(5, 5, 87, 0.5)
+ hsl(from var(--color-navy) h s l / 0.5)
+ rgba(0, 50, 200, 0.9)
+  hsl(from var(--color-primary) h s l / 0.9)
  */
 @utility bg-eu-linemap {
   background-color: black;
-  background-image: linear-gradient(to right bottom in oklab, rgba(5, 5, 87, 0.5) 0%, rgba(0, 50, 200, 0.9) 50%, rgba(5, 5, 87, 0.8) 100%), url("/eu-borders.svg");
+  background-image: linear-gradient(to right bottom in oklab,  hsl(from var(--color-navy) h s l / 0.5) 0%, hsl(from var(--color-primary) h s l / 0.9) 70%,  hsl(from var(--color-navy) h s l / 0.8)  100%), url("/eu-borders.svg");
   background-repeat: no-repeat;
   background-size: cover, 800px;
   background-position: center, center right -100px;
