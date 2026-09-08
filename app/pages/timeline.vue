@@ -4,9 +4,15 @@ import type { TimelineEntry } from '~~/server/api/timeline.get'
 const { data: entries } = await useFetch<TimelineEntry[]>('/api/timeline')
 
 const dateFormatter = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+const monthFormatter = new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric' })
 
-function formatDate(date: string) {
-  return dateFormatter.format(new Date(date))
+function formatDate(entry: TimelineEntry) {
+  // Forecast entries only carry month-level precision — showing a specific
+  // day would imply false confidence.
+  if (entry.status === 'expected') {
+    return `Expected ${monthFormatter.format(new Date(entry.date))}`
+  }
+  return dateFormatter.format(new Date(entry.date))
 }
 
 useHead({
@@ -33,12 +39,16 @@ useHead({
       <ol class="relative border-l-2 border-border pl-8">
         <li v-for="entry in entries" :key="entry.id" class="mb-10 last:mb-0">
           <span
-            class="absolute -ml-[calc(2rem+5px)] mt-1.5 h-3 w-3 rounded-full border-2 border-primary bg-white"
+            class="absolute -ml-[calc(2rem+5px)] mt-1.5 h-3 w-3 rounded-full border-2 bg-white"
+            :class="entry.status === 'expected' ? 'border-dashed border-secondary' : 'border-primary'"
             aria-hidden="true"
           />
-          <time :datetime="entry.date" class="text-sm font-medium text-primary">
-            {{ formatDate(entry.date) }}
-          </time>
+          <div class="flex flex-wrap items-center gap-2">
+            <time :datetime="entry.date" class="text-sm font-medium" :class="entry.status === 'expected' ? 'text-secondary' : 'text-primary'">
+              {{ formatDate(entry) }}
+            </time>
+            <span v-if="entry.status === 'expected'" class="tag">Forecast</span>
+          </div>
           <h2 class="mt-1 text-xl font-medium text-navy">
             {{ entry.title }}
           </h2>

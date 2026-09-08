@@ -45,7 +45,13 @@
     "id": "en301549-v321",
     "date": "2021-03-01",
     "title": "EN 301 549 V3.2.1 published",
-    "detail": "Current baseline version of EN 301 549 at the time of the EAA's application deadline; refines WCAG 2.1 AA alignment across web, software and hardware clauses."
+    "detail": "Refines WCAG 2.1 AA alignment across web, software and hardware clauses. Became the version in legal effect once cited in the Official Journal a few months later (see below)."
+  },
+  {
+    "id": "en301549-v321-oj-citation",
+    "date": "2021-08-12",
+    "title": "EN 301 549 V3.2.1 cited in the EU Official Journal",
+    "detail": "Commission Implementing Decision (EU) 2021/1339 (adopted 11 August 2021, published in OJ L 289 on 12 August 2021) cites V3.2.1 as the harmonised standard under the Web Accessibility Directive, giving it a presumption of conformity — the version still in legal effect today."
   },
   {
     "id": "wad-mobile-apps-deadline",
@@ -72,9 +78,22 @@
     "detail": "In-scope products and services placed on the EU market must meet EAA accessibility requirements from this date."
   },
   {
-    "id": "en301549-v411-preview",
-    "date": "2025-01-01",
-    "title": "EN 301 549 V4.1.1 in development",
-    "detail": "A new version of EN 301 549 is in development to align with WCAG 2.2 AA and update real-time text requirements, in support of the EAA. Check the ETSI portal for the current published status before citing a specific date."
+    "id": "en301549-v410-draft",
+    "date": "2025-11-01",
+    "title": "EN 301 549 V4.1.0 published as draft for public enquiry",
+    "detail": "Draft version updating Clauses 9–11 (web, non-web documents, software) to align with WCAG 2.2 AA (W3C Recommendation, December 2024), released for ETSI's public enquiry and vote ahead of finalisation."
+  },
+  {
+    "id": "en301549-v411-published",
+    "date": "2026-09-01",
+    "title": "EN 301 549 V4.1.1 published",
+    "detail": "Finalised version of EN 301 549, moving Clauses 9–11 to WCAG 2.2 AA. Not yet a cited harmonised standard under the EAA — see the expected Official Journal citation below. V3.2.1 (WCAG 2.1 AA) remains the version with legal effect until then."
+  },
+  {
+    "id": "en301549-v411-oj-citation-expected",
+    "date": "2026-10-01",
+    "title": "EN 301 549 V4.1.1 expected to be cited in the EU Official Journal",
+    "detail": "Once cited in the Official Journal, V4.1.1 becomes the harmonised standard carrying presumption of conformity under the EAA, superseding V3.2.1. Expected around October 2026 — this date is a forecast, not confirmed; check the Official Journal directly before relying on it.",
+    "status": "expected"
   }
 ]
