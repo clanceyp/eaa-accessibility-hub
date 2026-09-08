@@ -9,7 +9,7 @@ const open = ref(false)
         <span
           class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
           aria-hidden="true"
-        >EA</span>
+        >EAH</span>
         <span>EAA Accessibility Hub</span>
       </NuxtLink>
 
@@ -17,11 +17,8 @@ const open = ref(false)
         <NuxtLink to="/" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
           News
         </NuxtLink>
-        <NuxtLink to="/en301549/web" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
-          EN 301 549 · Web
-        </NuxtLink>
-        <NuxtLink to="/en301549/non-web" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
-          EN 301 549 · Non-web
+        <NuxtLink to="/en301549" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
+          EN 301 549
         </NuxtLink>
         <NuxtLink to="/timeline" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
           Timeline
@@ -51,11 +48,8 @@ const open = ref(false)
       <NuxtLink to="/" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
         News
       </NuxtLink>
-      <NuxtLink to="/en301549/web" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
-        EN 301 549 · Web
-      </NuxtLink>
-      <NuxtLink to="/en301549/non-web" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
-        EN 301 549 · Non-web
+      <NuxtLink to="/en301549" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
+        EN 301 549
       </NuxtLink>
       <NuxtLink to="/timeline" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
         Timeline

@@ -21,7 +21,7 @@ useHead({
           material on EN 301 549 and the European Accessibility Act.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <NuxtLink to="/en301549/web" class="btn-outline">
+          <NuxtLink to="/en301549" class="btn-outline">
             EN 301 549 overview
             <span aria-hidden="true">→</span>
           </NuxtLink>

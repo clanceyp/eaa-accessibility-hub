@@ -39,11 +39,10 @@ airports and stations, and payment terminals.
 
 ## Documents
 
-Electronic documents (PDF, Word, etc.) distributed as part of a product
-or service fall under the same Clause 9/11 principles depending on how
-they're delivered — a PDF linked from a website is generally assessed
-against the WCAG-based Clause 9 criteria adapted for documents (structure,
-tagging, reading order, alt text, form fields).
+**Clause 10** covers non-web documents — PDF, Word, ePub, spreadsheets
+and similar formats — distributed as part of a product or service. It
+applies WCAG-equivalent requirements adapted for document formats:
+structure, tagging, reading order, alt text, and form fields.
 
 ## Support services and documentation
 
@@ -53,5 +52,6 @@ formats and covering accessibility features of the product.
 
 ## Where to go next
 
-See the [Web overview](/en301549/web) for browser-delivered content, or
-the [timeline](/timeline) for compliance deadlines.
+See the [EN 301 549 overview](/en301549) for how all the clauses fit
+together, the [Web overview](/en301549/web) for browser-delivered
+content, or the [timeline](/timeline) for compliance deadlines.

@@ -51,6 +51,7 @@ for web-delivered services:
 
 ## Where to go next
 
-See the [timeline](/timeline) for key dates, or the
+See the [EN 301 549 overview](/en301549) for how all the clauses fit
+together, the [timeline](/timeline) for key dates, or the
 [non-web overview](/en301549/non-web) for requirements covering native
 apps, kiosks, documents, and hardware.
