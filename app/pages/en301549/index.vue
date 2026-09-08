@@ -83,9 +83,12 @@ const supportingClauses: Clause[] = [
         flat checklist. Three clauses carry almost all of the day-to-day
         content requirements — <strong class="text-ink">Clause 9</strong>
         for web, <strong class="text-ink">Clause 10</strong> for non-web
-        documents, and <strong class="text-ink">Clause 11</strong> for
-        software including mobile apps. A further set of clauses apply
-        only in specific situations, such as hardware or video.
+        documents, <strong class="text-ink">Clause 11</strong> for
+        software including mobile apps. <strong class="text-ink">Clause 12</strong>
+        requires that the documentation and support services are themselves accessible. 
+        <br/> 
+        A further set of clauses apply
+        only in specific situations, such as hardware and video.
       </p>
 
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
