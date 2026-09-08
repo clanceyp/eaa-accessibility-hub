@@ -16,6 +16,16 @@
   --color-muted: #333333;
 }
 
+/*
+ * Utility that puts the EU line-map SVG on whatever element carries it —
+ * size/position/effects are left to the usual bg-* utilities on the same
+ * element, and it composes with variants (e.g. md:bg-img-eu-linemap).
+ */
+@utility bg-img-eu-linemap {
+  background-image: url("/eu-borders.svg");
+  background-repeat: no-repeat;
+}
+
 @layer base {
   body {
     @apply bg-white text-ink font-sans antialiased;
