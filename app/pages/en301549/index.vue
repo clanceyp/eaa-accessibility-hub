@@ -92,7 +92,12 @@ const supportingClauses: Clause[] = [
         Core content clauses
       </h2>
       <div class="grid gap-6 md:grid-cols-3">
-        <div v-for="clause in coreClauses" :key="clause.number" class="card">
+        <NuxtLink
+          v-for="clause in coreClauses"
+          :key="clause.number"
+          :to="`/en301549/clause-${clause.number}`"
+          class="card block no-underline transition-shadow hover:shadow-md"
+        >
           <span class="tag mb-3">Clause {{ clause.number }}</span>
           <h3 class="mb-2 text-lg font-medium text-navy">
             {{ clause.title }}
@@ -100,7 +105,7 @@ const supportingClauses: Clause[] = [
           <p class="text-sm leading-relaxed text-muted">
             {{ clause.description }}
           </p>
-        </div>
+        </NuxtLink>
       </div>
 
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
@@ -113,7 +118,12 @@ const supportingClauses: Clause[] = [
         requirements on top of its software ones.
       </p>
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div v-for="clause in supportingClauses" :key="clause.number" class="rounded-xl border border-border p-4">
+        <NuxtLink
+          v-for="clause in supportingClauses"
+          :key="clause.number"
+          :to="`/en301549/clause-${clause.number}`"
+          class="block rounded-xl border border-border p-4 no-underline transition-shadow hover:shadow-md"
+        >
           <span class="text-xs font-semibold uppercase tracking-wide text-secondary">Clause {{ clause.number }}</span>
           <h3 class="mt-1 mb-1 font-medium text-navy">
             {{ clause.title }}
@@ -121,7 +131,7 @@ const supportingClauses: Clause[] = [
           <p class="text-sm leading-relaxed text-muted">
             {{ clause.description }}
           </p>
-        </div>
+        </NuxtLink>
       </div>
 
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">

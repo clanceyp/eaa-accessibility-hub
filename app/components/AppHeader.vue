@@ -18,7 +18,7 @@ const open = ref(false)
           News
         </NuxtLink>
         <NuxtLink to="/en301549" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
-          EN 301 549
+          Overview
         </NuxtLink>
         <NuxtLink to="/timeline" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium">
           Timeline
@@ -49,7 +49,7 @@ const open = ref(false)
         News
       </NuxtLink>
       <NuxtLink to="/en301549" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
-        EN 301 549
+        Overview
       </NuxtLink>
       <NuxtLink to="/timeline" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" @click="open = false">
         Timeline
