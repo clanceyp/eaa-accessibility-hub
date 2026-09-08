@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": "sweden-pts-e-commerce-accessibility-review-2026",
+    "title": "Swedish regulator PTS opens accessibility review of 28 e-commerce sites including IKEA and H&M",
+    "summary": "Sweden's Post and Telecom Authority (PTS) launched supervision of 28 e-commerce services — including IKEA, H&M, Coop and ICA — checking homepages, product pages and search functions against the accessibility law implementing the EAA. Oversight continues through 2026.",
+    "jurisdiction": "Sweden",
+    "date": "2026-03-03",
+    "sourceUrl": "https://pts.se/nyheter-och-pressmeddelanden/pts-granskar-ytterligare-11-e-handelstjansters-tillganglighet/",
+    "sourceName": "PTS (Post- och telestyrelsen)"
+  },
+  {
+    "id": "carrefour-france-accessibility-ruling-2026",
+    "title": "French court orders Carrefour to make e-commerce site and app fully accessible",
+    "summary": "The Tribunal judiciaire de Caen ruled in favour of disability associations apiDV and Droit Pluriel, ordering Carrefour France to make carrefour.fr and its mobile app fully accessible within six months. The court rejected the retailer's argument that 71% compliance under France's RGAA standard was sufficient.",
+    "jurisdiction": "France",
+    "date": "2026-06-04",
+    "sourceUrl": "https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-caen-apidv-et-droit-pluriel-c-carrefour-une-decision-de-justice-majeure-pour-laccessibilite-numerique/",
+    "sourceName": "Droit Pluriel"
+  },
+  {
+    "id": "eu-wad-monitoring-reports-2022-2024",
+    "title": "European Commission publishes 2022–2024 Web Accessibility Directive monitoring reports",
+    "summary": "The Commission published the latest round of member state monitoring reports required under the Web Accessibility Directive, covering all 27 EU member states plus Norway, with each country's national compliance findings.",
+    "jurisdiction": "EU",
+    "date": "2025-02-13",
+    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/web-accessibility-directive-monitoring-reports-2022-2024",
+    "sourceName": "European Commission — Shaping Europe's Digital Future"
+  },
+  {
+    "id": "sweden-digg-monitoring-report-2025",
+    "title": "DIGG report finds persistent accessibility gaps in Swedish public digital services",
+    "summary": "Sweden's digital government agency DIGG published its 2022–2024 monitoring report: in-depth reviews of public sector websites and apps found many still very difficult or impossible to use with assistive technology, despite gradual improvement in lighter-touch reviews.",
+    "jurisdiction": "Sweden",
+    "date": "2025-02-12",
+    "sourceUrl": "https://www.digg.se/om-oss/nyheter/analys-och-uppfoljning/nyheter/2025-02-12-fortfarande-brister-i-tillganglighet---det-visar-diggs-nya-rapport-om-digital-offentlig-service",
+    "sourceName": "Digg (Myndigheten för digital förvaltning)"
+  },
+  {
+    "id": "spain-vueling-accessibility-fine-confirmed-2024",
+    "title": "Spain's Audiencia Nacional confirms €90,000 fine against Vueling for inaccessible website",
+    "summary": "Spain's National Court upheld a €90,000 fine and a six-month ban from official subsidies against airline Vueling, finding it met only around 10% of required web accessibility criteria — largely unchanged since a 2016 inspection.",
+    "jurisdiction": "Spain",
+    "date": "2024-03-22",
+    "sourceUrl": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-Audiencia-Nacional-confirma-la-multa-de-90-000-euros-a-Vueling-por-incumplir-en-su-web-las-condiciones-de-accesibilidad-para-personas-con-discapacidad",
+    "sourceName": "Consejo General del Poder Judicial (CGPJ)"
+  }
+]
