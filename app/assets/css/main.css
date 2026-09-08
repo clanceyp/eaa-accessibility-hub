@@ -21,9 +21,12 @@
  * size/position/effects are left to the usual bg-* utilities on the same
  * element, and it composes with variants (e.g. md:bg-img-eu-linemap).
  */
-@utility bg-img-eu-linemap {
-  background-image: url("/eu-borders.svg");
+@utility bg-eu-linemap {
+  background-color: black;
+  background-image: linear-gradient(to right bottom in oklab, rgba(5, 5, 87, 0.5) 0%, rgba(0, 50, 200, 0.9) 50%, rgba(5, 5, 87, 0.8) 100%), url("/eu-borders.svg");
   background-repeat: no-repeat;
+  background-size: cover, 800px;
+  background-position: center, center right -100px;
 }
 
 @layer base {

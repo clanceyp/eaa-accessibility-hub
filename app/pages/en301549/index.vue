@@ -63,8 +63,7 @@ const supportingClauses: Clause[] = [
 
 <template>
   <div>
-    <section class="relative overflow-hidden bg-gradient-to-br from-navy to-primary text-white">
-      <HeroMapBackground />
+    <section class="relative overflow-hidden bg-eu-linemap text-white">
       <div class="relative z-10 mx-auto max-w-6xl px-6 py-16">
         <h1 class="text-5xl font-light">
           EN 301 549 — Overview

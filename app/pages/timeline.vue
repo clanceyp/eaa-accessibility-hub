@@ -16,7 +16,7 @@ useHead({
 
 <template>
   <div>
-    <section class="relative overflow-hidden bg-gradient-to-br from-navy to-primary text-white">
+    <section class="relative overflow-hidden bg-eu-linemap text-white">
       <HeroMapBackground />
       <div class="relative z-10 mx-auto max-w-6xl px-6 py-16">
         <h1 class="text-5xl font-light">
@@ -24,7 +24,7 @@ useHead({
         </h1>
         <p class="mt-4 max-w-xl text-white/85">
           Key milestones for EN 301 549 and the European Accessibility Act
-          — version releases, transposition deadlines and compliance
+          - version releases, transposition deadlines and compliance
           dates.
         </p>
       </div>
