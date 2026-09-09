@@ -9,7 +9,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "update:news": "tsx scripts/update-news.ts",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.124.0",
@@ -26,9 +28,13 @@
   "devDependencies": {
     "@nuxt/content": "^3.16.0",
     "@nuxt/eslint": "^1.17.0",
+    "@nuxt/test-utils": "^4.3.2",
+    "@vue/test-utils": "^2.5.0",
     "dotenv": "^17.4.2",
+    "happy-dom": "^20.14.0",
     "tsx": "^4.23.13",
     "typescript": "^6.0.3",
+    "vitest": "^5.0.0",
     "vue-tsc": "^3.3.11"
   }
 }

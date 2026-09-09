@@ -27,7 +27,9 @@ export type NewsEntry = z.infer<typeof newsEntrySchema>
 export const timelineDraftSchema = z.object({
   title: z.string().min(1),
   detail: z.string().min(1),
-  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'date must be YYYY-MM-DD')
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'date must be YYYY-MM-DD'),
+  /** Set when the date is a forecast rather than a confirmed/past event */
+  status: z.literal('expected').optional()
 })
 
 export const timelineDraftListSchema = z.array(timelineDraftSchema)

@@ -33,6 +33,8 @@ npm run typecheck   # nuxt typecheck (vue-tsc)
 npm run build        # production build into .output/
 npm run preview      # preview a production build locally
 npm run update:news  # run the news pipeline locally (see below)
+npm run test          # run the test suite once (see Testing below)
+npm run test:watch    # re-run tests on file change
 ```
 
 No environment variables are required to run the site itself — `news.get.ts`
@@ -68,6 +70,50 @@ scripts/                update-news.ts (CLI entry point) and
   Frontmatter `title` values containing a colon must be quoted
   (`title: "EN 301 549 — Clause 9: Web"`) — an unquoted colon splits the
   YAML value into a nested object and breaks the page `<title>`.
+
+## Testing
+
+Tests run on [Vitest](https://vitest.dev), using
+[`@nuxt/test-utils`](https://nuxt.com/docs/getting-started/testing) for the
+tests that need a real Nuxt/Nitro app. `npm run test` runs everything
+(~5s); `npm run test:watch` re-runs on change. There's no CI wired up yet
+— run it locally before pushing, especially before touching
+`server/api/*`, `scripts/pipeline/*`, or `data/*.json`.
+
+```
+tests/
+  unit/           Plain Vitest, node environment, no Nuxt boot — fast.
+    pipeline/      slugify(), uniqueId(), the zod schemas in
+                   scripts/pipeline/schema.ts
+    data/          Validates data/news.json and data/timeline.json
+                   against those schemas, and checks for duplicate ids
+                   — run this after any manual edit to either file
+  nuxt/           Component tests. Needs `// @vitest-environment nuxt`
+                  at the top of the file (switches Vitest into a Nuxt
+                  context so auto-imports resolve) and
+                  `mountSuspended()` from `@nuxt/test-utils/runtime`.
+  e2e/            Boots the actual built app in a child process and hits
+                  it over real HTTP with `$fetch` from
+                  `@nuxt/test-utils/e2e`. Slower (~5s to boot), but this
+                  is the layer that exercises what a browser (or Vercel)
+                  actually sees — see the note below.
+```
+
+**Why there's an e2e layer at all:** the news/timeline API routes
+previously read their JSON off disk at runtime and worked fine in every
+unit test and in local dev, while silently returning nothing once
+deployed to Vercel (see
+[Why the data is imported, not read from disk](#why-the-data-is-imported-not-read-from-disk)).
+No amount of unit-testing the route's *logic* in isolation would have
+caught that — the bug was in how the built server resolved a file path,
+which only shows up when the real built server actually runs and is hit
+over HTTP. `tests/e2e/api.test.ts` does exactly that. If you add a new
+`server/api/*` route that touches the filesystem, add a matching e2e
+assertion rather than only a unit test.
+
+Adding a new component test: copy the shape of
+`tests/nuxt/components/NewsCard.test.ts` — one file per component,
+`mountSuspended` + `@vitest-environment nuxt` pragma at the top.
 
 ## Update pipeline
 
