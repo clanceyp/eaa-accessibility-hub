@@ -1,5 +1,4 @@
-import { readFile } from 'node:fs/promises'
-import { fileURLToPath } from 'node:url'
+import timelineData from '../../data/timeline.json'
 
 export interface TimelineEntry {
   id: string
@@ -10,9 +9,9 @@ export interface TimelineEntry {
   status?: 'expected'
 }
 
-export default defineEventHandler(async (): Promise<TimelineEntry[]> => {
-  const path = fileURLToPath(new URL('../../data/timeline.json', import.meta.url))
-  const raw = await readFile(path, 'utf-8')
-  const entries: TimelineEntry[] = JSON.parse(raw)
-  return entries.sort((a, b) => b.date.localeCompare(a.date))
+// Imported (not read from disk at runtime) — see news.get.ts for why.
+const entries = timelineData as TimelineEntry[]
+
+export default defineEventHandler((): TimelineEntry[] => {
+  return [...entries].sort((a, b) => b.date.localeCompare(a.date))
 })

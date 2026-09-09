@@ -1,5 +1,4 @@
-import { readFile } from 'node:fs/promises'
-import { fileURLToPath } from 'node:url'
+import newsData from '../../data/news.json'
 
 export interface NewsEntry {
   id: string
@@ -11,9 +10,14 @@ export interface NewsEntry {
   sourceName: string
 }
 
-export default defineEventHandler(async (): Promise<NewsEntry[]> => {
-  const path = fileURLToPath(new URL('../../data/news.json', import.meta.url))
-  const raw = await readFile(path, 'utf-8')
-  const entries: NewsEntry[] = JSON.parse(raw)
-  return entries.sort((a, b) => b.date.localeCompare(a.date))
+// Imported (not read from disk at runtime) so the data is bundled into the
+// serverless function output — a runtime fs.readFile() of a path outside
+// server/ silently returns nothing on Vercel, since Nitro only traces and
+// includes files reachable via static imports. This also fits the site's
+// design: news.json only changes via a reviewed PR merge, which triggers a
+// fresh deployment anyway.
+const entries = newsData as NewsEntry[]
+
+export default defineEventHandler((): NewsEntry[] => {
+  return [...entries].sort((a, b) => b.date.localeCompare(a.date))
 })
