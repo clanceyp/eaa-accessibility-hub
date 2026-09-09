@@ -66,7 +66,7 @@ const supportingClauses: Clause[] = [
     <section class="relative overflow-hidden bg-eu-linemap text-white">
       <div class="relative z-10 mx-auto max-w-6xl px-6 py-16">
         <h1 class="text-5xl font-light">
-          EN 301 549 — Overview
+          Overview - EN 301 549
         </h1>
         <p class="mt-4 max-w-2xl text-white/85">
           The European standard for ICT accessibility, referenced by the

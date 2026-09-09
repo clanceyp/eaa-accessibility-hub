@@ -17,7 +17,7 @@ const open = ref(false)
         <ul class="flex items-center gap-6">
           <li>
             <NuxtLink to="/" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium underline underline-offset-4">
-              News
+              Home
             </NuxtLink>
           </li>
           <li>
@@ -56,7 +56,7 @@ const open = ref(false)
       <ul class="flex flex-col gap-1">
         <li>
           <NuxtLink to="/" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" active-class="text-primary font-medium underline underline-offset-4" @click="open = false">
-            News
+            Home
           </NuxtLink>
         </li>
         <li>

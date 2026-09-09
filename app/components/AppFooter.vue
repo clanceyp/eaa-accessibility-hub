@@ -21,7 +21,7 @@ const year = new Date().getFullYear()
           Site
         </p>
         <ul class="mt-3 space-y-2 text-sm">
-          <li><NuxtLink to="/" class="text-white no-underline hover:underline">News</NuxtLink></li>
+          <li><NuxtLink to="/" class="text-white no-underline hover:underline">Home</NuxtLink></li>
           <li><NuxtLink to="/en301549" class="text-white no-underline hover:underline">Overview - EN 301 549</NuxtLink>
           <ul class="ml-4 mt-3 space-y-2">
             <li><NuxtLink to="/en301549/web" class="text-white no-underline hover:underline">Web</NuxtLink></li>
