@@ -80,7 +80,7 @@ const supportingClauses: Clause[] = [
     <section class="mx-auto max-w-6xl px-6 py-16">
       <p class="max-w-3xl leading-relaxed text-muted">
         EN 301 549 is organised into numbered clauses rather than a single
-        flat checklist. Three clauses carry almost all of the day-to-day
+        flat checklist. Four clauses carry almost all of the day-to-day
         content requirements — <strong class="text-ink">Clause 9</strong>
         for web, <strong class="text-ink">Clause 10</strong> for non-web
         documents, <strong class="text-ink">Clause 11</strong> for
