@@ -1,5 +1,23 @@
 [
   {
+    "id": "italy-agid-enforcement-regulation-2026",
+    "title": "Italy's AgID publishes new regulation on digital accessibility enforcement powers",
+    "summary": "AgID adopted a regulation (Determinazione n. 84/2026) setting out how it verifies and sanctions accessibility non-compliance under Legge Stanca and the EAA-implementing decree — covering public administrations and private providers (banks, e-commerce, transport booking, audiovisual media) with average turnover over €500 million. It defines a path from preliminary review by the Digital Ombudsman through to formal sanctions.",
+    "jurisdiction": "Italy",
+    "date": "2026-05-29",
+    "sourceUrl": "https://www.agid.gov.it/it/notizie/accessibilita-pubblicato-il-nuovo-regolamento-agid-sulle-attivita-di-vigilanza",
+    "sourceName": "AgID (Agenzia per l'Italia Digitale)"
+  },
+  {
+    "id": "netherlands-acm-webshop-accessibility-finding-2026",
+    "title": "Dutch regulator ACM finds 61% of major webshops digitally inaccessible",
+    "summary": "The Authority for Consumers and Markets (ACM) reviewed the largest Dutch webshops and found 61% could not be used by customers with disabilities to place orders, with a further 33% presenting serious difficulties. ACM said it is contacting the worst performers and that businesses failing to improve after a warning face enforcement action.",
+    "jurisdiction": "Netherlands",
+    "date": "2026-03-24",
+    "sourceUrl": "https://www.acm.nl/nl/publicaties/acm-klant-met-beperking-kan-bij-merendeel-grote-webwinkels-niet-terecht",
+    "sourceName": "Autoriteit Consument & Markt (ACM)"
+  },
+  {
     "id": "sweden-pts-e-commerce-accessibility-review-2026",
     "title": "Swedish regulator PTS opens accessibility review of 28 e-commerce sites including IKEA and H&M",
     "summary": "Sweden's Post and Telecom Authority (PTS) launched supervision of 28 e-commerce services — including IKEA, H&M, Coop and ICA — checking homepages, product pages and search functions against the accessibility law implementing the EAA. Oversight continues through 2026.",
