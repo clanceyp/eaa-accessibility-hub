@@ -215,3 +215,14 @@ from the repo automatically.
 - GitHub branch protection / required review on `main` is not yet
   confirmed — recommended, since the pipeline's only safety net is "a
   human merges the PR"
+- **Vercel Analytics not yet added.** Decided against Google Analytics —
+  it needs cookies and a consent banner (gtag.js sets `_ga`/`_ga_*`, and
+  standard GA sends data to Google/US, which several EU DPAs have flagged
+  as a GDPR problem without extra safeguards) — which conflicts with the
+  "no cookies, no tracking analytics" claims in the Privacy Policy and
+  the site's own stated no-tracking design. Vercel Analytics identifies
+  visitors with a request hash discarded after 24h instead of a cookie,
+  so it fits the existing Privacy Policy as-is with no consent banner
+  needed. To add: enable it in the Vercel dashboard (Project →
+  Analytics — paid add-on, check pricing first) and add the
+  `@vercel/analytics` Nuxt integration.
