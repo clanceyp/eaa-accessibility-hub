@@ -215,3 +215,19 @@ from the repo automatically.
 - GitHub branch protection / required review on `main` is not yet
   confirmed — recommended, since the pipeline's only safety net is "a
   human merges the PR"
+- **Vercel Analytics: code done, dashboard toggle still needed.**
+  `@vercel/analytics` is installed and registered as a Nuxt module
+  (see PR #2) — pinned to the `2.3.0-canary` release since stable
+  `2.0.1`'s `vue-router` peer dependency (`^4`) conflicts with this
+  project's `vue-router@5`; revisit once `^5` support ships in a stable
+  release. Decided against Google Analytics earlier — it needs cookies
+  and a consent banner (gtag.js sets `_ga`/`_ga_*`, and standard GA
+  sends data to Google/US, which several EU DPAs have flagged as a
+  GDPR problem without extra safeguards) — which would have conflicted
+  with the "no cookies, no tracking analytics" claims in the Privacy
+  Policy. Vercel Analytics identifies visitors with a request hash
+  discarded after 24h instead of a cookie, so it fits the existing
+  Privacy Policy as-is with no consent banner needed. **Still to do:**
+  enable Web Analytics for the project in the Vercel dashboard
+  (Project → Analytics → Enable — paid add-on, check pricing first);
+  nothing shows up in the dashboard until that's on.
