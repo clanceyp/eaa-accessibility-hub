@@ -55,7 +55,7 @@ const year = new Date().getFullYear()
     </div>
 
     <div class="border-t border-white/10 px-6 py-4 text-center text-xs text-white/50">
-      © {{ year }} EAA Accessibility Hub. Not affiliated with ETSI, CEN, CENELEC or the European Commission.
+      © {{ year }} EAA A11y Hub. Not affiliated with ETSI, CEN, CENELEC or the European Commission.
     </div>
   </footer>
 </template>

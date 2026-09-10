@@ -10,7 +10,7 @@ function formatDate(entry: TimelineEntry) {
 }
 
 useHead({
-  title: 'Timeline — EAA Accessibility Hub'
+  title: 'Timeline — EAA A11y Hub'
 })
 </script>
 

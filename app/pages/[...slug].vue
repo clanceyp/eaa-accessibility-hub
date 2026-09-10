@@ -10,7 +10,7 @@ if (!page.value) {
 }
 
 useHead({
-  title: `${page.value.title} — EAA Accessibility Hub`,
+  title: `${page.value.title} — EAA A11y Hub`,
   meta: [{ name: 'description', content: page.value.description }]
 })
 </script>

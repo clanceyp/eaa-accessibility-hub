@@ -4,7 +4,7 @@ import type { NewsEntry } from '~~/server/api/news.get'
 const { data: news } = await useFetch<NewsEntry[]>('/api/news')
 
 useHead({
-  title: 'EAA Accessibility Hub — EU accessibility legal & regulatory news'
+  title: 'EAA A11y Hub — EU accessibility legal & regulatory news'
 })
 </script>
 

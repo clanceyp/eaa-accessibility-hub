@@ -10,7 +10,7 @@ const open = ref(false)
           class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
           aria-hidden="true"
         >EAH</span>
-        <span>EAA Accessibility Hub</span>
+        <span>EAA A11y Hub</span>
       </NuxtLink>
 
       <nav aria-label="Primary navigation" class="hidden md:block">
