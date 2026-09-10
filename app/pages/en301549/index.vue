@@ -129,10 +129,10 @@ const supportingClauses: Clause[] = [
         Core content clauses
       </h2>
       <ul class="grid gap-6 md:grid-cols-3">
-        <li v-for="clause in coreClauses" :key="clause.number">
+        <li v-for="clause in coreClauses" :key="clause.number" class="h-full">
           <NuxtLink
             :to="`/en301549/clause-${clause.number}`"
-            class="card block no-underline transition-shadow hover:shadow-md"
+            class="card block h-full no-underline transition-shadow hover:shadow-md"
           >
             <span class="tag mb-3">Clause {{ clause.number }}</span>
             <h3 class="mb-2 text-lg font-medium text-navy">
@@ -155,10 +155,10 @@ const supportingClauses: Clause[] = [
         requirements on top of its software ones.
       </p>
       <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <li v-for="clause in supportingClauses" :key="clause.number">
+        <li v-for="clause in supportingClauses" :key="clause.number" class="h-full">
           <NuxtLink
             :to="`/en301549/clause-${clause.number}`"
-            class="block rounded-xl border border-border p-4 no-underline transition-shadow hover:shadow-md"
+            class="block h-full rounded-xl border border-border p-4 no-underline transition-shadow hover:shadow-md"
           >
             <span class="text-xs font-semibold uppercase tracking-wide text-secondary">Clause {{ clause.number }}</span>
             <h3 class="mt-1 mb-1 font-medium text-navy">
@@ -175,8 +175,8 @@ const supportingClauses: Clause[] = [
         Go deeper
       </h2>
       <ul class="grid gap-6 md:grid-cols-2">
-        <li>
-          <NuxtLink to="/en301549/web" class="card block no-underline transition-shadow hover:shadow-md">
+        <li class="h-full">
+          <NuxtLink to="/en301549/web" class="card block h-full no-underline transition-shadow hover:shadow-md">
             <h3 class="mb-2 text-xl font-medium text-navy">
               Web →
             </h3>
@@ -186,8 +186,8 @@ const supportingClauses: Clause[] = [
             </p>
           </NuxtLink>
         </li>
-        <li>
-          <NuxtLink to="/en301549/non-web" class="card block no-underline transition-shadow hover:shadow-md">
+        <li class="h-full">
+          <NuxtLink to="/en301549/non-web" class="card block h-full no-underline transition-shadow hover:shadow-md">
             <h3 class="mb-2 text-xl font-medium text-navy">
               Non-web →
             </h3>
@@ -207,13 +207,13 @@ const supportingClauses: Clause[] = [
         official EU guidance, and further reading.
       </p>
       <ul class="grid gap-4 sm:grid-cols-2">
-        <li v-for="resource in resources" :key="resource.url">
+        <li v-for="resource in resources" :key="resource.url" class="h-full">
           <a
             :href="resource.url"
             target="_blank"
             rel="noopener noreferrer"
             title="Opens in a new tab"
-            class="card block no-underline transition-shadow hover:shadow-md"
+            class="card block h-full no-underline transition-shadow hover:shadow-md"
           >
             <h3 class="mb-1 flex items-center gap-1 text-lg font-medium text-navy">
               {{ resource.title }}
