@@ -27,6 +27,15 @@
     "sourceName": "PTS (Post- och telestyrelsen)"
   },
   {
+    "id": "auchan-france-accessibility-dismissal-2026",
+    "title": "French court dismisses accessibility claim against Auchan despite finding \"major\" barriers",
+    "summary": "The Tribunal judiciaire de Lille dismissed a claim by apiDV and Droit Pluriel against Auchan E-Commerce, ruling the retailer's online subsidiary fell below France's €250 million revenue threshold for accessibility obligations under the 2005 disability law — despite finding non-compliance with a \"strong or major impact\" across 13 of the site's 19 sections. The associations are appealing to the Cour d'appel de Douai, arguing the ruling wrongly ignored the EU accessibility directive's separate, much lower revenue threshold for e-commerce.",
+    "jurisdiction": "France",
+    "date": "2026-05-06",
+    "sourceUrl": "https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-lille-le-6-mai-2026apidv-et-droit-pluriel-c-auchan-e-commerce-une-interpretation-gravement-erronee-du-droit-de-laccessibilite-numerique/",
+    "sourceName": "Droit Pluriel"
+  },
+  {
     "id": "carrefour-france-accessibility-ruling-2026",
     "title": "French court orders Carrefour to make e-commerce site and app fully accessible",
     "summary": "The Tribunal judiciaire de Caen ruled in favour of disability associations apiDV and Droit Pluriel, ordering Carrefour France to make carrefour.fr and its mobile app fully accessible within six months. The court rejected the retailer's argument that 71% compliance under France's RGAA standard was sufficient.",
