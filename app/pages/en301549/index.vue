@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'EN 301 549 Overview — EAA A11y Hub'
+  title: 'EN 301 549 Overview - EAA A11y Hub'
 })
 
 interface Clause {
@@ -19,24 +19,24 @@ interface Resource {
 const resources: Resource[] = [
   {
     title: 'EN 301 549 V4.1.1 (full standard, PDF)',
-    description: 'The normative text itself, published by ETSI. Everything on this site is a plain-language summary of this document — check it directly for anything you need to cite or rely on formally.',
+    description: 'The normative text itself, published by ETSI. Everything on this site is a plain-language summary of this document - check it directly for anything you need to cite or rely on formally.',
     url: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf',
     sourceName: 'ETSI'
   },
   {
-    title: 'European Accessibility Act — official overview',
+    title: 'European Accessibility Act - official overview',
     description: "The European Commission's own page on the EAA: scope, covered products and services, implementation timeline and micro-enterprise exemptions.",
     url: 'https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en',
     sourceName: 'European Commission'
   },
   {
-    title: 'WCAG2ICT — applying WCAG to non-web ICT',
-    description: 'W3C guidance on how WCAG success criteria translate to non-web software and documents — the basis for how Clauses 10 and 11 restate WCAG in non-web terms.',
+    title: 'WCAG2ICT - applying WCAG to non-web ICT',
+    description: 'W3C guidance on how WCAG success criteria translate to non-web software and documents - the basis for how Clauses 10 and 11 restate WCAG in non-web terms.',
     url: 'https://www.w3.org/TR/wcag2ict-22/',
     sourceName: 'W3C Web Accessibility Initiative'
   },
   {
-    title: 'Auditsu — accessibility resources & guides',
+    title: 'Auditsu - accessibility resources & guides',
     description: 'Practical articles on auditing for and implementing EAA, WCAG and EN 301 549 compliance.',
     url: 'https://auditsu.com/resources',
     sourceName: 'Auditsu'
@@ -52,12 +52,12 @@ const coreClauses: Clause[] = [
   {
     number: '10',
     title: 'Non-web documents',
-    description: 'Applies WCAG-equivalent requirements to electronic documents distributed as part of a product or service — PDF, Word, ePub, spreadsheets and similar formats.'
+    description: 'Applies WCAG-equivalent requirements to electronic documents distributed as part of a product or service - PDF, Word, ePub, spreadsheets and similar formats.'
   },
   {
     number: '11',
     title: 'Software',
-    description: 'Covers non-web software — native mobile apps, desktop applications, operating systems — restating WCAG-equivalent criteria in software terms, plus platform accessibility API requirements.'
+    description: 'Covers non-web software - native mobile apps, desktop applications, operating systems - restating WCAG-equivalent criteria in software terms, plus platform accessibility API requirements.'
   }
 ]
 
@@ -115,7 +115,7 @@ const supportingClauses: Clause[] = [
       <p class="max-w-3xl leading-relaxed text-muted">
         EN 301 549 is organised into numbered clauses rather than a single
         flat checklist. Four clauses carry almost all of the day-to-day
-        content requirements — <strong class="text-ink">Clause 9</strong>
+        content requirements - <strong class="text-ink">Clause 9</strong>
         for web, <strong class="text-ink">Clause 10</strong> for non-web
         documents, <strong class="text-ink">Clause 11</strong> for
         software including mobile apps. <strong class="text-ink">Clause 12</strong>
@@ -128,107 +128,111 @@ const supportingClauses: Clause[] = [
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
         Core content clauses
       </h2>
-      <div class="grid gap-6 md:grid-cols-3">
-        <NuxtLink
-          v-for="clause in coreClauses"
-          :key="clause.number"
-          :to="`/en301549/clause-${clause.number}`"
-          class="card block no-underline transition-shadow hover:shadow-md"
-        >
-          <span class="tag mb-3">Clause {{ clause.number }}</span>
-          <h3 class="mb-2 text-lg font-medium text-navy">
-            {{ clause.title }}
-          </h3>
-          <p class="text-sm leading-relaxed text-muted">
-            {{ clause.description }}
-          </p>
-        </NuxtLink>
-      </div>
+      <ul class="grid gap-6 md:grid-cols-3">
+        <li v-for="clause in coreClauses" :key="clause.number">
+          <NuxtLink
+            :to="`/en301549/clause-${clause.number}`"
+            class="card block no-underline transition-shadow hover:shadow-md"
+          >
+            <span class="tag mb-3">Clause {{ clause.number }}</span>
+            <h3 class="mb-2 text-lg font-medium text-navy">
+              {{ clause.title }}
+            </h3>
+            <p class="text-sm leading-relaxed text-muted">
+              {{ clause.description }}
+            </p>
+          </NuxtLink>
+        </li>
+      </ul>
 
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
         Supporting clauses
       </h2>
       <p class="mb-6 max-w-3xl text-muted">
         These apply alongside Clauses 9–11 depending on what the product
-        or service actually does — a kiosk with a camera and a card
+        or service actually does - a kiosk with a camera and a card
         reader may bring in hardware, video and voice-communication
         requirements on top of its software ones.
       </p>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <NuxtLink
-          v-for="clause in supportingClauses"
-          :key="clause.number"
-          :to="`/en301549/clause-${clause.number}`"
-          class="block rounded-xl border border-border p-4 no-underline transition-shadow hover:shadow-md"
-        >
-          <span class="text-xs font-semibold uppercase tracking-wide text-secondary">Clause {{ clause.number }}</span>
-          <h3 class="mt-1 mb-1 font-medium text-navy">
-            {{ clause.title }}
-          </h3>
-          <p class="text-sm leading-relaxed text-muted">
-            {{ clause.description }}
-          </p>
-        </NuxtLink>
-      </div>
+      <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li v-for="clause in supportingClauses" :key="clause.number">
+          <NuxtLink
+            :to="`/en301549/clause-${clause.number}`"
+            class="block rounded-xl border border-border p-4 no-underline transition-shadow hover:shadow-md"
+          >
+            <span class="text-xs font-semibold uppercase tracking-wide text-secondary">Clause {{ clause.number }}</span>
+            <h3 class="mt-1 mb-1 font-medium text-navy">
+              {{ clause.title }}
+            </h3>
+            <p class="text-sm leading-relaxed text-muted">
+              {{ clause.description }}
+            </p>
+          </NuxtLink>
+        </li>
+      </ul>
 
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
         Go deeper
       </h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <NuxtLink to="/en301549/web" class="card block no-underline transition-shadow hover:shadow-md">
-          <h3 class="mb-2 text-xl font-medium text-navy">
-            Web →
-          </h3>
-          <p class="text-sm leading-relaxed text-muted">
-            The full requirements for websites and web applications under
-            Clause 9, and how the WCAG principles apply.
-          </p>
-        </NuxtLink>
-        <NuxtLink to="/en301549/non-web" class="card block no-underline transition-shadow hover:shadow-md">
-          <h3 class="mb-2 text-xl font-medium text-navy">
-            Non-web →
-          </h3>
-          <p class="text-sm leading-relaxed text-muted">
-            Native apps, kiosks, hardware, documents and support
-            services under Clauses 5–8 and 10–13.
-          </p>
-        </NuxtLink>
-      </div>
+      <ul class="grid gap-6 md:grid-cols-2">
+        <li>
+          <NuxtLink to="/en301549/web" class="card block no-underline transition-shadow hover:shadow-md">
+            <h3 class="mb-2 text-xl font-medium text-navy">
+              Web →
+            </h3>
+            <p class="text-sm leading-relaxed text-muted">
+              The full requirements for websites and web applications under
+              Clause 9, and how the WCAG principles apply.
+            </p>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/en301549/non-web" class="card block no-underline transition-shadow hover:shadow-md">
+            <h3 class="mb-2 text-xl font-medium text-navy">
+              Non-web →
+            </h3>
+            <p class="text-sm leading-relaxed text-muted">
+              Native apps, kiosks, hardware, documents and support
+              services under Clauses 5–8 and 10–13.
+            </p>
+          </NuxtLink>
+        </li>
+      </ul>
 
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
         Resources
       </h2>
       <p class="mb-6 max-w-3xl text-muted">
-        External references worth keeping close — the standard itself,
+        External references worth keeping close - the standard itself,
         official EU guidance, and further reading.
       </p>
-      <div class="grid gap-4 sm:grid-cols-2">
-        <a
-          v-for="resource in resources"
-          :key="resource.url"
-          :href="resource.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Opens in a new tab"
-          class="card block no-underline transition-shadow hover:shadow-md"
-        >
-          <h3 class="mb-1 flex items-center gap-1 text-lg font-medium text-navy">
-            {{ resource.title }}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 flex-none" aria-hidden="true">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            <span class="sr-only">. opens in a new tab</span>
-          </h3>
-          <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-secondary">
-            {{ resource.sourceName }}
-          </p>
-          <p class="text-sm leading-relaxed text-muted">
-            {{ resource.description }}
-          </p>
-        </a>
-      </div>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        <li v-for="resource in resources" :key="resource.url">
+          <a
+            :href="resource.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens in a new tab"
+            class="card block no-underline transition-shadow hover:shadow-md"
+          >
+            <h3 class="mb-1 flex items-center gap-1 text-lg font-medium text-navy">
+              {{ resource.title }}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 flex-none" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              <span class="sr-only">. opens in a new tab</span>
+            </h3>
+            <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-secondary">
+              {{ resource.sourceName }}
+            </p>
+            <p class="text-sm leading-relaxed text-muted">
+              {{ resource.description }}
+            </p>
+          </a>
+        </li>
+      </ul>
     </section>
   </div>
 </template>
