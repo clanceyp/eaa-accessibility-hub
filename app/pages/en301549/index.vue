@@ -130,23 +130,7 @@ const supportingClauses: Clause[] = [
       </h2>
       <ul class="grid gap-6 md:grid-cols-3">
         <li v-for="clause in coreClauses" :key="clause.number" class="h-full">
-          <div
-            class="card h-full transition-shadow hover:shadow-md has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2"
-          >
-            <span class="tag mb-3" aria-hidden="true">Clause {{ clause.number }}</span>
-            <h3 class="mb-2 text-lg font-medium text-navy">
-              <NuxtLink
-                :to="`/en301549/clause-${clause.number}`"
-                class="text-inherit no-underline outline-none"
-                :aria-label="`Clause ${ clause.number } ${ clause.title }`"
-              >
-                {{ clause.title }}
-              </NuxtLink>
-            </h3>
-            <p class="text-sm leading-relaxed text-muted">
-              {{ clause.description }}
-            </p>
-          </div>
+          <ClauseCard :number="clause.number" :title="clause.title" :description="clause.description" />
         </li>
       </ul>
 
@@ -161,18 +145,7 @@ const supportingClauses: Clause[] = [
       </p>
       <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="clause in supportingClauses" :key="clause.number" class="h-full">
-          <NuxtLink
-            :to="`/en301549/clause-${clause.number}`"
-            class="block h-full rounded-xl border border-border p-4 no-underline transition-shadow hover:shadow-md"
-          >
-            <span class="text-xs font-semibold uppercase tracking-wide text-secondary">Clause {{ clause.number }}</span>
-            <h3 class="mt-1 mb-1 font-medium text-navy">
-              {{ clause.title }}
-            </h3>
-            <p class="text-sm leading-relaxed text-muted">
-              {{ clause.description }}
-            </p>
-          </NuxtLink>
+          <ClauseCard :number="clause.number" :title="clause.title" :description="clause.description" />
         </li>
       </ul>
 
@@ -181,26 +154,30 @@ const supportingClauses: Clause[] = [
       </h2>
       <ul class="grid gap-6 md:grid-cols-2">
         <li class="h-full">
-          <NuxtLink to="/en301549/web" class="card block h-full no-underline transition-shadow hover:shadow-md">
+          <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
-              Web →
+              <NuxtLink to="/en301549/web" class="text-inherit no-underline outline-none">
+                Web →
+              </NuxtLink>
             </h3>
             <p class="text-sm leading-relaxed text-muted">
               The full requirements for websites and web applications under
               Clause 9, and how the WCAG principles apply.
             </p>
-          </NuxtLink>
+          </div>
         </li>
         <li class="h-full">
-          <NuxtLink to="/en301549/non-web" class="card block h-full no-underline transition-shadow hover:shadow-md">
+          <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
-              Non-web →
+              <NuxtLink to="/en301549/non-web" class="text-inherit no-underline outline-none">
+                Non-web →
+              </NuxtLink>
             </h3>
             <p class="text-sm leading-relaxed text-muted">
               Native apps, kiosks, hardware, documents and support
               services under Clauses 5–8 and 10–13.
             </p>
-          </NuxtLink>
+          </div>
         </li>
       </ul>
 
@@ -213,21 +190,23 @@ const supportingClauses: Clause[] = [
       </p>
       <ul class="grid gap-4 sm:grid-cols-2">
         <li v-for="resource in resources" :key="resource.url" class="h-full">
-          <a
-            :href="resource.url"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Opens in a new tab"
-            class="card block h-full no-underline transition-shadow hover:shadow-md"
-          >
-            <h3 class="mb-1 flex items-center gap-1 text-lg font-medium text-navy">
-              {{ resource.title }}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 flex-none" aria-hidden="true">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
-              <span class="sr-only">. opens in a new tab</span>
+          <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
+            <h3 class="mb-1 text-lg font-medium text-navy">
+              <a
+                :href="resource.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Opens in a new tab"
+                class="inline-flex items-center gap-1 text-inherit no-underline outline-none"
+              >
+                {{ resource.title }}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 flex-none" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span class="sr-only">. opens in a new tab</span>
+              </a>
             </h3>
             <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-secondary">
               {{ resource.sourceName }}
@@ -235,7 +214,7 @@ const supportingClauses: Clause[] = [
             <p class="text-sm leading-relaxed text-muted">
               {{ resource.description }}
             </p>
-          </a>
+          </div>
         </li>
       </ul>
     </section>

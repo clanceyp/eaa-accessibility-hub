@@ -66,7 +66,22 @@
   }
 
   .card {
-    @apply rounded-2xl border border-border bg-white p-6 shadow-sm;
+    @apply rounded-2xl border border-border bg-surface p-6 shadow-sm transition-shadow;
+  }
+
+  /*
+   * Deliberately a plain nested rule, not a `hover:shadow-md` utility class
+   * on individual elements: .card's own shadow-sm is @apply'd here in
+   * @layer components, and a `hover:shadow-md` utility class (in
+   * @layer utilities) does not reliably win the box-shadow property
+   * cascade against it in this build, even though @layer utilities
+   * should out-rank @layer components — the underlying box-shadow
+   * declaration stays static while only the --tw-shadow custom property
+   * updates. Keeping both rules in the same layer via @apply sidesteps
+   * that entirely.
+   */
+  .card:hover {
+    @apply shadow-md;
   }
 
   .prose-content {
