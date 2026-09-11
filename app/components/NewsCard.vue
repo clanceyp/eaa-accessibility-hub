@@ -13,7 +13,7 @@ const flag = computed(() => jurisdictionFlagEmoji(props.entry.jurisdiction))
 </script>
 
 <template>
-  <article class="card">
+  <article class="card flex flex-col">
     <div class="mb-3 flex flex-wrap items-center gap-3">
       <span
         v-if="flag"
@@ -39,7 +39,7 @@ const flag = computed(() => jurisdictionFlagEmoji(props.entry.jurisdiction))
       target="_blank"
       rel="noopener noreferrer"
       title="Opens in a new tab"
-      class="inline-flex items-center gap-1 text-sm font-medium text-primary underline underline-offset-2 hover:decoration-2"
+      class="mt-auto inline-flex w-fit items-center gap-1 self-start text-sm font-medium text-primary underline underline-offset-2 hover:decoration-2"
     >
       Read at {{ entry.sourceName }}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 flex-none" aria-hidden="true">
