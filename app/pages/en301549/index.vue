@@ -130,18 +130,23 @@ const supportingClauses: Clause[] = [
       </h2>
       <ul class="grid gap-6 md:grid-cols-3">
         <li v-for="clause in coreClauses" :key="clause.number" class="h-full">
-          <NuxtLink
-            :to="`/en301549/clause-${clause.number}`"
-            class="card block h-full no-underline transition-shadow hover:shadow-md"
+          <div
+            class="card h-full transition-shadow hover:shadow-md has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2"
           >
-            <span class="tag mb-3">Clause {{ clause.number }}</span>
+            <span class="tag mb-3" aria-hidden="true">Clause {{ clause.number }}</span>
             <h3 class="mb-2 text-lg font-medium text-navy">
-              {{ clause.title }}
+              <NuxtLink
+                :to="`/en301549/clause-${clause.number}`"
+                class="text-inherit no-underline outline-none"
+                :aria-label="`Clause ${ clause.number } ${ clause.title }`"
+              >
+                {{ clause.title }}
+              </NuxtLink>
             </h3>
             <p class="text-sm leading-relaxed text-muted">
               {{ clause.description }}
             </p>
-          </NuxtLink>
+          </div>
         </li>
       </ul>
 
