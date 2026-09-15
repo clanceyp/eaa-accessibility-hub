@@ -1,5 +1,45 @@
 [
   {
+    "title": "Deque breaks down what changed in EN 301 549 v4.1.1 and what teams should do",
+    "summary": "Deque published a practitioner analysis of the finalised EN 301 549 v4.1.1, walking through the substantive clause changes versus the previous version and the practical steps development and testing teams should take.",
+    "category": "Implementation & Testing Guidance",
+    "jurisdiction": "EU",
+    "date": "2026-09-08",
+    "sourceUrl": "https://www.deque.com/blog/en-301-549-v4-1-1-is-final-what-changed-what-it-means-and-what-you-should-do/",
+    "sourceName": "Deque",
+    "id": "2026-09-08-deque-breaks-down-what-changed-in-en-301-549-v4-1"
+  },
+  {
+    "title": "BarrierBreak publishes clause-level guide to EN 301 549 v4.1.1 changes",
+    "summary": "BarrierBreak released a guide summarising what is new in EN 301 549 v4.1.1, aimed at helping testers and developers understand which requirements have been added or reworded compared with the earlier version.",
+    "category": "Implementation & Testing Guidance",
+    "jurisdiction": "EU",
+    "date": "2026-09-08",
+    "sourceUrl": "https://www.barrierbreak.com/en-301-549-v4-1-1/",
+    "sourceName": "BarrierBreak",
+    "id": "2026-09-08-barrierbreak-publishes-clause-level-guide-to-en-3"
+  },
+  {
+    "title": "ETSI publishes EN 301 549 V4.1.1, the new harmonised accessibility standard",
+    "summary": "ETSI has published EN 301 549 V4.1.1 (dated 2026-09) as a Harmonised European Standard, superseding the previous version. It is the revision that emerged from the V4.1.0 draft and final draft cycle and is the reference standard for EU public sector and European Accessibility Act digital accessibility conformance.",
+    "category": "Standards Updates",
+    "jurisdiction": "EU",
+    "date": "2026-09-01",
+    "sourceUrl": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
+    "sourceName": "ETSI",
+    "id": "2026-09-01-etsi-publishes-en-301-549-v4-1-1-the-new-harmonis"
+  },
+  {
+    "id": "carrefour-france-accessibility-ruling-2026",
+    "title": "French court orders Carrefour to make e-commerce site and app fully accessible",
+    "summary": "The Tribunal judiciaire de Caen ruled in favour of disability associations apiDV and Droit Pluriel, ordering Carrefour France to make carrefour.fr and its mobile app fully accessible within six months. The court rejected the retailer's argument that 71% compliance under France's RGAA standard was sufficient.",
+    "category": "Rulings & Enforcement",
+    "jurisdiction": "France",
+    "date": "2026-06-04",
+    "sourceUrl": "https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-caen-apidv-et-droit-pluriel-c-carrefour-une-decision-de-justice-majeure-pour-laccessibilite-numerique/",
+    "sourceName": "Droit Pluriel"
+  },
+  {
     "id": "italy-agid-enforcement-regulation-2026",
     "title": "Italy's AgID publishes new regulation on digital accessibility enforcement powers",
     "summary": "AgID adopted a regulation (Determinazione n. 84/2026) setting out how it verifies and sanctions accessibility non-compliance under Legge Stanca and the EAA-implementing decree — covering public administrations and private providers (banks, e-commerce, transport booking, audiovisual media) with average turnover over €500 million. It defines a path from preliminary review by the Digital Ombudsman through to formal sanctions.",
@@ -8,6 +48,16 @@
     "date": "2026-05-29",
     "sourceUrl": "https://www.agid.gov.it/it/notizie/accessibilita-pubblicato-il-nuovo-regolamento-agid-sulle-attivita-di-vigilanza",
     "sourceName": "AgID (Agenzia per l'Italia Digitale)"
+  },
+  {
+    "id": "auchan-france-accessibility-dismissal-2026",
+    "title": "French court dismisses accessibility claim against Auchan despite finding \"major\" barriers",
+    "summary": "The Tribunal judiciaire de Lille dismissed a claim by apiDV and Droit Pluriel against Auchan E-Commerce, ruling the retailer's online subsidiary fell below France's €250 million revenue threshold for accessibility obligations under the 2005 disability law — despite finding non-compliance with a \"strong or major impact\" across 13 of the site's 19 sections. The associations are appealing to the Cour d'appel de Douai, arguing the ruling wrongly ignored the EU accessibility directive's separate, much lower revenue threshold for e-commerce.",
+    "category": "Rulings & Enforcement",
+    "jurisdiction": "France",
+    "date": "2026-05-06",
+    "sourceUrl": "https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-lille-le-6-mai-2026apidv-et-droit-pluriel-c-auchan-e-commerce-une-interpretation-gravement-erronee-du-droit-de-laccessibilite-numerique/",
+    "sourceName": "Droit Pluriel"
   },
   {
     "id": "netherlands-acm-webshop-accessibility-finding-2026",
@@ -28,26 +78,6 @@
     "date": "2026-03-03",
     "sourceUrl": "https://pts.se/nyheter-och-pressmeddelanden/pts-granskar-ytterligare-11-e-handelstjansters-tillganglighet/",
     "sourceName": "PTS (Post- och telestyrelsen)"
-  },
-  {
-    "id": "auchan-france-accessibility-dismissal-2026",
-    "title": "French court dismisses accessibility claim against Auchan despite finding \"major\" barriers",
-    "summary": "The Tribunal judiciaire de Lille dismissed a claim by apiDV and Droit Pluriel against Auchan E-Commerce, ruling the retailer's online subsidiary fell below France's €250 million revenue threshold for accessibility obligations under the 2005 disability law — despite finding non-compliance with a \"strong or major impact\" across 13 of the site's 19 sections. The associations are appealing to the Cour d'appel de Douai, arguing the ruling wrongly ignored the EU accessibility directive's separate, much lower revenue threshold for e-commerce.",
-    "category": "Rulings & Enforcement",
-    "jurisdiction": "France",
-    "date": "2026-05-06",
-    "sourceUrl": "https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-lille-le-6-mai-2026apidv-et-droit-pluriel-c-auchan-e-commerce-une-interpretation-gravement-erronee-du-droit-de-laccessibilite-numerique/",
-    "sourceName": "Droit Pluriel"
-  },
-  {
-    "id": "carrefour-france-accessibility-ruling-2026",
-    "title": "French court orders Carrefour to make e-commerce site and app fully accessible",
-    "summary": "The Tribunal judiciaire de Caen ruled in favour of disability associations apiDV and Droit Pluriel, ordering Carrefour France to make carrefour.fr and its mobile app fully accessible within six months. The court rejected the retailer's argument that 71% compliance under France's RGAA standard was sufficient.",
-    "category": "Rulings & Enforcement",
-    "jurisdiction": "France",
-    "date": "2026-06-04",
-    "sourceUrl": "https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-caen-apidv-et-droit-pluriel-c-carrefour-une-decision-de-justice-majeure-pour-laccessibilite-numerique/",
-    "sourceName": "Droit Pluriel"
   },
   {
     "id": "eu-wad-monitoring-reports-2022-2024",
