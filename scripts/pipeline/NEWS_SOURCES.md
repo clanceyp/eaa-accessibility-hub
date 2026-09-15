@@ -1,4 +1,4 @@
-# Trusted sources — `data/news.json` legal/enforcement pipeline
+# Trusted sources — `data/news.json` pipeline
 
 This is the source list referenced in `CLAUDE.md`'s open items ("exact
 list of source sites for the nightly news search — currently left to
@@ -7,10 +7,10 @@ the model's judgement"). It's a starting point for tightening
 surfaces too much noise or misses known sources — not a hard allowlist
 enforced in code today.
 
-Reminder of scope (from `news-config.ts`): genuine **legal or
-regulatory action** on digital accessibility — court judgments,
-ombudsman rulings, enforcement notices/sanctions, and monitoring-body
-findings under the Web Accessibility Directive (EU 2016/2102). Not
+Scope and the exact category taxonomy live in `news-config.ts`'s
+`systemPrompt` (source of truth — don't let this file's summary drift
+from it): rulings & enforcement, regulatory guidance, standards updates,
+monitoring reports, and procurement/tenders tied to EN 301 549. Not
 general accessibility news, blog posts, or product announcements.
 
 ## EU-level
@@ -30,8 +30,8 @@ general accessibility news, blog posts, or product announcements.
 ## National monitoring/enforcement bodies
 
 These are the bodies each EU member state designated to monitor and
-enforce the Web Accessibility Directive. Prioritise these for
-"monitoring body findings" and "enforcement notices."
+enforce the Web Accessibility Directive. Prioritise these for the
+"Monitoring Reports" and "Rulings & Enforcement" categories.
 
 | Country | Body | URL |
 |---|---|---|
@@ -57,6 +57,28 @@ monitoring body under Article 7 of 2016/2102; add others here as their
 findings show up in real entries (follow the pattern already used in
 `data/news.json`, e.g. Italy/AgID, Netherlands/ACM, Sweden/PTS,
 Sweden/DIGG).
+
+## Standards bodies
+
+For "Standards Updates" — new/revised EN 301 549, WCAG, or ETSI/CEN-CENELEC
+publications.
+
+- **ETSI** <https://www.etsi.org/technologies/human-factors> — publishes
+  EN 301 549 itself; check their publications/news feed for new versions.
+- **CEN-CENELEC** <https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/accessibility/> —
+  joint technical committee work referenced by EN 301 549.
+- **W3C WAI** <https://www.w3.org/WAI/standards-guidelines/wcag/> — WCAG
+  version updates and errata that EN 301 549 incorporates by reference.
+
+## Procurement & tenders
+
+For "Procurement & Tenders" — public sector notices citing EN 301 549
+conformance.
+
+- **TED (Tenders Electronic Daily)** <https://ted.europa.eu/> — the
+  EU's official public procurement portal; search for EN 301 549 in
+  technical specifications.
+
 
 ## Courts and litigation trackers
 

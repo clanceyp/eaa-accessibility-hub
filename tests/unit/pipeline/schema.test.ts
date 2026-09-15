@@ -9,6 +9,7 @@ import {
 const validNewsDraft = {
   title: 'French court orders Carrefour to make e-commerce site fully accessible',
   summary: 'The Tribunal judiciaire de Caen ruled in favour of disability associations.',
+  category: 'Rulings & Enforcement',
   jurisdiction: 'France',
   date: '2026-06-04',
   sourceUrl: 'https://droitpluriel.fr/decision',
@@ -37,6 +38,11 @@ describe('newsDraftSchema', () => {
 
   it('rejects a sourceUrl that is not a valid URL', () => {
     const result = newsDraftSchema.safeParse({ ...validNewsDraft, sourceUrl: 'droitpluriel.fr' })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects a category outside the fixed taxonomy', () => {
+    const result = newsDraftSchema.safeParse({ ...validNewsDraft, category: 'Hot Takes' })
     expect(result.success).toBe(false)
   })
 })

@@ -1,4 +1,8 @@
 import { z } from 'zod'
+import { NEWS_CATEGORIES } from '../../shared/news-categories'
+
+export { NEWS_CATEGORIES }
+export type { NewsCategory } from '../../shared/news-categories'
 
 /**
  * Schema for what Claude extracts from search results. `id` is generated
@@ -8,6 +12,7 @@ import { z } from 'zod'
 export const newsDraftSchema = z.object({
   title: z.string().min(1),
   summary: z.string().min(1),
+  category: z.enum(NEWS_CATEGORIES),
   jurisdiction: z.string().min(1),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'date must be YYYY-MM-DD'),
   sourceUrl: z.string().url(),
