@@ -79,7 +79,6 @@ conformance.
   EU's official public procurement portal; search for EN 301 549 in
   technical specifications.
 
-
 ## Courts and litigation trackers
 
 - **Droit Pluriel** <https://droitpluriel.fr/> — French digital
