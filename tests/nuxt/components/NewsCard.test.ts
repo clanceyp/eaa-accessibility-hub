@@ -37,19 +37,19 @@ describe('NewsCard', () => {
     expect(wrapper.find('.tag').text()).toBe('Wonderland')
   })
 
-  it('marks the external link as opening in a new tab, accessibly', async () => {
+  it('gives the external link an accessible name combining the title and publication, and marks it as opening in a new tab', async () => {
     const wrapper = await mountSuspended(NewsCard, { props: { entry: franceEntry } })
     const link = wrapper.find('a[target="_blank"]')
 
     expect(link.exists()).toBe(true)
     expect(link.attributes('title')).toBe('Opens in a new tab')
     expect(link.attributes('rel')).toContain('noopener')
+    expect(link.attributes('aria-label')).toBe(
+      `${franceEntry.title}. Read at ${franceEntry.sourceName} (opens in a new tab)`
+    )
 
     const icon = link.find('svg')
     expect(icon.attributes('aria-hidden')).toBe('true')
-
-    const srOnly = link.find('.sr-only')
-    expect(srOnly.text().toLowerCase()).toContain('opens in a new tab')
   })
 
   it('formats the date as a readable, machine-parseable <time> element', async () => {
