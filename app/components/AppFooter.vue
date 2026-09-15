@@ -56,6 +56,18 @@ const year = new Date().getFullYear()
 
     <div class="border-t border-white/10 px-6 py-4 text-center text-xs text-white/50">
       © {{ year }} EAA A11y Hub. Not affiliated with ETSI, CEN, CENELEC or the European Commission.
+      An
+      <a
+        href="https://inclusiveinterface.co.uk/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Opens in a new tab"
+        class="text-white/70 underline underline-offset-2 hover:text-white"
+      >
+        Inclusive Interface
+        <span class="sr-only">. opens in a new tab</span>
+      </a>
+      site.
     </div>
   </footer>
 </template>

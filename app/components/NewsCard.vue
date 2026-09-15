@@ -43,6 +43,7 @@ const flag = computed(() => jurisdictionFlagEmoji(props.entry.jurisdiction))
       target="_blank"
       rel="noopener noreferrer"
       title="Opens in a new tab"
+      :aria-label="`${entry.title}. Read at ${entry.sourceName} (opens in a new tab)`"
       class="mt-auto inline-flex w-fit items-center gap-1 self-start text-sm font-medium text-primary underline underline-offset-2 hover:decoration-2"
     >
       Read at {{ entry.sourceName }}
@@ -51,7 +52,6 @@ const flag = computed(() => jurisdictionFlagEmoji(props.entry.jurisdiction))
         <polyline points="15 3 21 3 21 9" />
         <line x1="10" y1="14" x2="21" y2="3" />
       </svg>
-      <span class="sr-only">. opens in a new tab</span>
     </a>
   </article>
 </template>
