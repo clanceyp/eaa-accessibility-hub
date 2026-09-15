@@ -45,7 +45,7 @@ describe('API routes', async () => {
 
   it('renders the homepage with at least one news entry', async () => {
     const html = await $fetch<string>('/')
-    expect(html).toContain('Latest legal')
+    expect(html).toContain('Latest EN 301 549 developments')
   })
 
   it('renders the timeline page', async () => {
