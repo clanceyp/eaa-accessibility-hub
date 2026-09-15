@@ -8,6 +8,7 @@ const franceEntry: NewsEntry = {
   id: 'carrefour-france-accessibility-ruling-2026',
   title: 'French court orders Carrefour to make e-commerce site and app fully accessible',
   summary: 'The Tribunal judiciaire de Caen ruled in favour of disability associations.',
+  category: 'Rulings & Enforcement',
   jurisdiction: 'France',
   date: '2026-06-04',
   sourceUrl: 'https://droitpluriel.fr/decision',

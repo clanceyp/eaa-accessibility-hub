@@ -1,9 +1,11 @@
 import newsData from '../../data/news.json'
+import type { NewsCategory } from '../../shared/news-categories'
 
 export interface NewsEntry {
   id: string
   title: string
   summary: string
+  category: NewsCategory
   jurisdiction: string
   date: string
   sourceUrl: string
