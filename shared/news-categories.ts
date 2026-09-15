@@ -12,8 +12,12 @@ export const NEWS_CATEGORIES = [
   'Rulings & Enforcement',
   'Regulatory Guidance',
   'Standards Updates',
+  'Implementation & Testing Guidance',
   'Monitoring Reports',
+  'Research & Analysis',
+  'Product & Vendor Conformance',
   'Procurement & Tenders',
+  'Training & Events',
   'General News'
 ] as const
 

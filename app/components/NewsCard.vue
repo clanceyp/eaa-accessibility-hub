@@ -14,6 +14,10 @@ const flag = computed(() => jurisdictionFlagEmoji(props.entry.jurisdiction))
 
 <template>
   <article class="card flex flex-col">
+    <p class="mb-2 text-xs font-semibold tracking-wide text-primary uppercase">
+      {{ entry.category }}
+    </p>
+
     <div class="mb-3 flex flex-wrap items-center gap-3">
       <span
         v-if="flag"

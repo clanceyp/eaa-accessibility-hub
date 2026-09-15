@@ -62,11 +62,13 @@ useHead({
 
     <section class="mx-auto max-w-6xl px-6 py-16">
       <h2 class="mb-2 text-3xl font-medium text-navy">
-        Latest legal & regulatory news
+        Latest EN 301 549 developments
       </h2>
       <p class="mb-10 max-w-2xl text-muted">
-        Court cases, ombudsman rulings, enforcement notices and monitoring
-        body findings related to accessibility law across the EU.
+        Rulings and enforcement, regulatory guidance, standards updates,
+        testing guidance, monitoring reports, research, vendor conformance,
+        procurement notices and training — everything happening across the
+        EN 301 549 ecosystem, in one feed.
       </p>
 
       <CategoryFilter
