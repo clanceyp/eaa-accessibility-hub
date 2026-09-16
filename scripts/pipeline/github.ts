@@ -90,3 +90,48 @@ export async function openUpdatePr(octokit: Octokit, opts: OpenUpdatePrOptions):
 
   return { branchName: opts.branchName, prUrl: pr.html_url, prNumber: pr.number }
 }
+
+export interface WriteFileDirectlyOptions {
+  owner: string
+  repo: string
+  /** Repo-relative path, e.g. "data/news-meta.json" */
+  filePath: string
+  /** Full new file content */
+  fileContent: string
+  commitMessage: string
+}
+
+/**
+ * Writes a single file straight to the repo's default branch — no branch,
+ * no PR. Reserved for operational metadata (e.g. "when did we last run a
+ * search") that doesn't need human review, unlike editorial content
+ * (news/timeline entries), which must always go through openUpdatePr.
+ */
+export async function writeFileDirectly(octokit: Octokit, opts: WriteFileDirectlyOptions): Promise<void> {
+  const { owner, repo, filePath, fileContent, commitMessage } = opts
+
+  const { data: repoInfo } = await octokit.rest.repos.get({ owner, repo })
+  const baseBranch = repoInfo.default_branch
+
+  let sha: string | undefined
+  try {
+    const { data: existing } = await octokit.rest.repos.getContent({ owner, repo, path: filePath, ref: baseBranch })
+    if (!Array.isArray(existing) && existing.type === 'file') {
+      sha = existing.sha
+    }
+  } catch (error) {
+    if (!(error instanceof Error) || !('status' in error) || error.status !== 404) {
+      throw error
+    }
+  }
+
+  await octokit.rest.repos.createOrUpdateFileContents({
+    owner,
+    repo,
+    path: filePath,
+    message: commitMessage,
+    content: Buffer.from(fileContent).toString('base64'),
+    branch: baseBranch,
+    sha
+  })
+}

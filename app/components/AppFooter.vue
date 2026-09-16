@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import type { NewsEntry } from '~~/server/api/news.get'
+import type { NewsMeta } from '~~/server/api/news-meta.get'
 
 const year = new Date().getFullYear()
 
-// /api/news returns entries sorted newest-first, so the first entry's date
-// is the most recent content update.
-const { data: news } = await useFetch<NewsEntry[]>('/api/news')
+const { data: meta } = await useFetch<NewsMeta>('/api/news-meta')
 
 const dateFormatter = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
 const lastUpdated = computed(() => {
-  const latest = news.value?.[0]?.date
-  return latest ? { iso: latest, formatted: dateFormatter.format(new Date(latest)) } : null
+  const date = meta.value?.lastSearchedAt
+  return date ? { iso: date, formatted: dateFormatter.format(new Date(date)) } : null
 })
 </script>
 

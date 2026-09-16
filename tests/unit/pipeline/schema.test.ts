@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   newsDraftSchema,
   newsEntrySchema,
+  newsSearchMetaSchema,
   timelineDraftSchema,
   timelineEntrySchema
 } from '../../../scripts/pipeline/schema'
@@ -85,5 +86,15 @@ describe('timelineEntrySchema', () => {
   it('requires an id in addition to the draft fields', () => {
     expect(timelineEntrySchema.safeParse(validTimelineDraft).success).toBe(false)
     expect(timelineEntrySchema.safeParse({ ...validTimelineDraft, id: 'en301549-v411-published' }).success).toBe(true)
+  })
+})
+
+describe('newsSearchMetaSchema', () => {
+  it('accepts a valid ISO date', () => {
+    expect(newsSearchMetaSchema.safeParse({ lastSearchedAt: '2026-09-16' }).success).toBe(true)
+  })
+
+  it('rejects a non-ISO date', () => {
+    expect(newsSearchMetaSchema.safeParse({ lastSearchedAt: '16 September 2026' }).success).toBe(false)
   })
 })

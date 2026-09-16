@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { $fetch, setup } from '@nuxt/test-utils/e2e'
-import { newsEntrySchema, timelineEntrySchema } from '../../scripts/pipeline/schema'
+import { newsEntrySchema, newsSearchMetaSchema, timelineEntrySchema } from '../../scripts/pipeline/schema'
 
 /**
  * Boots the real Nuxt/Nitro server and hits the API routes over HTTP,
@@ -41,6 +41,11 @@ describe('API routes', async () => {
     const dates = (entries as { date: string }[]).map((e) => e.date)
     const sorted = [...dates].sort((a, b) => b.localeCompare(a))
     expect(dates).toEqual(sorted)
+  })
+
+  it('GET /api/news-meta returns valid search metadata', async () => {
+    const meta = await $fetch<unknown>('/api/news-meta')
+    expect(newsSearchMetaSchema.safeParse(meta).success).toBe(true)
   })
 
   it('renders the homepage with at least one news entry', async () => {

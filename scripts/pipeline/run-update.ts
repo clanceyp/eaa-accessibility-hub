@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 import type { z } from 'zod'
 import { searchAndExtract } from './search-and-extract'
-import { createGithubClient, getFileContent, openUpdatePr } from './github'
+import { createGithubClient, getFileContent, openUpdatePr, writeFileDirectly } from './github'
 import { slugify, uniqueId } from './slugify'
 
 export interface PipelineConfig<Draft, Entry extends { id: string; date: string; title: string }> {
@@ -16,6 +16,14 @@ export interface PipelineConfig<Draft, Entry extends { id: string; date: string;
   idFromDraft: (draft: Draft) => string
   /** Combines a draft with its generated id into a full entry */
   toEntry: (draft: Draft, id: string) => Entry
+  /**
+   * If set, records { lastSearchedAt: <today> } directly to this path on
+   * the default branch after every run — regardless of whether the search
+   * found any new entries. Bypasses the PR review flow: this is
+   * operational metadata (when did we last search), not editorial content,
+   * so it doesn't need a human to merge it.
+   */
+  searchMetaFilePath?: string
 }
 
 export interface PipelineResult {
@@ -36,6 +44,7 @@ export async function runPipelineUpdate<Draft, Entry extends { id: string; date:
   env: PipelineEnv
 ): Promise<PipelineResult> {
   const octokit = createGithubClient(env.githubToken)
+  const today = new Date().toISOString().slice(0, 10)
 
   // Read from the repo's default branch (via the GitHub API, not the local
   // checkout) so this always diffs against the latest merged state, whether
@@ -54,6 +63,16 @@ export async function runPipelineUpdate<Draft, Entry extends { id: string; date:
     existingIds: [...existingIds]
   })
 
+  if (config.searchMetaFilePath) {
+    await writeFileDirectly(octokit, {
+      owner: env.githubOwner,
+      repo: env.githubRepo,
+      filePath: config.searchMetaFilePath,
+      fileContent: `${JSON.stringify({ lastSearchedAt: today }, null, 2)}\n`,
+      commitMessage: `Record ${config.name} search run: ${today}`
+    })
+  }
+
   const newEntries: Entry[] = []
   for (const draft of drafts) {
     const baseId = config.idFromDraft(draft)
@@ -70,7 +89,6 @@ export async function runPipelineUpdate<Draft, Entry extends { id: string; date:
   const merged = [...existingEntries, ...newEntries].sort((a, b) => b.date.localeCompare(a.date))
   const fileContent = `${JSON.stringify(merged, null, 2)}\n`
 
-  const today = new Date().toISOString().slice(0, 10)
   const branchName = `automated/${config.name}-update-${today}-${Date.now()}`
 
   const entrySummary = newEntries.map((e) => `- ${e.date}: ${e.title}`).join('\n')

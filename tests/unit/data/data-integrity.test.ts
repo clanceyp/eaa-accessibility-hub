@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import newsData from '../../../data/news.json'
+import newsMetaData from '../../../data/news-meta.json'
 import timelineData from '../../../data/timeline.json'
-import { newsEntrySchema, timelineEntrySchema } from '../../../scripts/pipeline/schema'
+import { newsEntrySchema, newsSearchMetaSchema, timelineEntrySchema } from '../../../scripts/pipeline/schema'
 
 describe('data/news.json', () => {
   it('is a non-empty array', () => {
@@ -22,6 +23,13 @@ describe('data/news.json', () => {
   it('has no duplicate sourceUrls', () => {
     const urls = newsData.map((entry) => entry.sourceUrl)
     expect(new Set(urls).size).toBe(urls.length)
+  })
+})
+
+describe('data/news-meta.json', () => {
+  it('matches the news search meta schema', () => {
+    const result = newsSearchMetaSchema.safeParse(newsMetaData)
+    expect(result.success, result.success ? '' : JSON.stringify(result.error?.issues)).toBe(true)
   })
 })
 

@@ -29,6 +29,13 @@ export const newsEntrySchema = newsDraftSchema.extend({
 
 export type NewsEntry = z.infer<typeof newsEntrySchema>
 
+/** Operational metadata — when the search last ran, not editorial content. */
+export const newsSearchMetaSchema = z.object({
+  lastSearchedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'date must be YYYY-MM-DD')
+})
+
+export type NewsSearchMeta = z.infer<typeof newsSearchMetaSchema>
+
 export const timelineDraftSchema = z.object({
   title: z.string().min(1),
   detail: z.string().min(1),
