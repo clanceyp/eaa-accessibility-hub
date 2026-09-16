@@ -1,5 +1,16 @@
 <script setup lang="ts">
+import type { NewsMeta } from '~~/server/api/news-meta.get'
+
 const year = new Date().getFullYear()
+
+const { data: meta } = await useFetch<NewsMeta>('/api/news-meta')
+
+const dateFormatter = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+
+const lastUpdated = computed(() => {
+  const date = meta.value?.lastSearchedAt
+  return date ? { iso: date, formatted: dateFormatter.format(new Date(date)) } : null
+})
 </script>
 
 <template>
@@ -13,6 +24,9 @@ const year = new Date().getFullYear()
           A reference and news hub for EN 301 549 and the European
           Accessibility Act, for developers and testers working on digital
           accessibility compliance across the EU.
+        </p>
+        <p v-if="lastUpdated" class="mt-3 text-xs text-white/50">
+          Last updated: <time :datetime="lastUpdated.iso">{{ lastUpdated.formatted }}</time>
         </p>
       </div>
 

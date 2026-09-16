@@ -105,5 +105,6 @@ export const newsConfig: PipelineConfig<NewsDraft, NewsEntry> = {
   systemPrompt,
   userPrompt,
   idFromDraft: (draft) => slugId(draft.title, draft.date),
-  toEntry: (draft, id) => ({ ...draft, id })
+  toEntry: (draft, id) => ({ ...draft, id }),
+  searchMetaFilePath: 'data/news-meta.json'
 }
