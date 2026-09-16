@@ -1,5 +1,18 @@
 <script setup lang="ts">
+import type { NewsEntry } from '~~/server/api/news.get'
+
 const year = new Date().getFullYear()
+
+// /api/news returns entries sorted newest-first, so the first entry's date
+// is the most recent content update.
+const { data: news } = await useFetch<NewsEntry[]>('/api/news')
+
+const dateFormatter = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+
+const lastUpdated = computed(() => {
+  const latest = news.value?.[0]?.date
+  return latest ? { iso: latest, formatted: dateFormatter.format(new Date(latest)) } : null
+})
 </script>
 
 <template>
@@ -13,6 +26,9 @@ const year = new Date().getFullYear()
           A reference and news hub for EN 301 549 and the European
           Accessibility Act, for developers and testers working on digital
           accessibility compliance across the EU.
+        </p>
+        <p v-if="lastUpdated" class="mt-3 text-xs text-white/50">
+          Last updated: <time :datetime="lastUpdated.iso">{{ lastUpdated.formatted }}</time>
         </p>
       </div>
 
