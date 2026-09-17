@@ -1,5 +1,15 @@
 [
   {
+    "title": "W3C publishes updated WCAG 3 Working Draft for public review",
+    "summary": "The W3C Web Accessibility Initiative published a new WCAG 3 Working Draft and opened it for public comment. WCAG 3 is the successor guideline set that will eventually feed into accessibility standards referenced by EN 301 549, so developers and testers tracking future clause changes are asked to review and comment.",
+    "category": "Standards Updates",
+    "jurisdiction": "International",
+    "date": "2026-09-10",
+    "sourceUrl": "https://www.w3.org/WAI/news/2026-09-10/wcag3/",
+    "sourceName": "W3C Web Accessibility Initiative (WAI)",
+    "id": "2026-09-10-w3c-publishes-updated-wcag-3-working-draft-for-pu"
+  },
+  {
     "title": "Deque breaks down what changed in EN 301 549 v4.1.1 and what teams should do",
     "summary": "Deque published a practitioner analysis of the finalised EN 301 549 v4.1.1, walking through the substantive clause changes versus the previous version and the practical steps development and testing teams should take.",
     "category": "Implementation & Testing Guidance",
