@@ -242,4 +242,21 @@
   article.bg-map[data-zone="UN" i] {
     background-image: none;
   }
+
+  ol[aria-label] li:first-child span:first-child:before {
+    position: absolute;
+    font-feature-settings: normal;
+    font-size: 0.8rem;
+    font-variation-settings: normal;
+    font-weight: 700;
+    text-box-trim: trim-both;
+    color: var(--color-secondary);
+    text-align: right;
+    transform: translate(-2.5rem, -0.3rem);
+  }
+  @media (min-width: 64rem) {
+    ol[aria-label] li:first-child span:first-child:before {
+      content: attr(data-year);
+    }
+  }
 }

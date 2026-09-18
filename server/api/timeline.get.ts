@@ -7,6 +7,8 @@ export interface TimelineEntry {
   detail: string
   /** Set when the date is a forecast rather than a confirmed/past event */
   status?: 'expected'
+  sourceUrl: string
+  sourceName: string
 }
 
 // Imported (not read from disk at runtime) — see news.get.ts for why.
