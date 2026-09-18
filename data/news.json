@@ -1,5 +1,16 @@
 [
   {
+    "title": "W3C publishes updated WCAG 3.0 Working Draft for public review",
+    "summary": "The W3C Accessibility Guidelines Working Group published a refreshed WCAG 3.0 Working Draft on 10 September 2026 and opened it for public review, with specific review questions on the proposed conformance model. WCAG 3.0 remains a draft and does not replace WCAG 2.2, which is the version referenced by the newly published EN 301 549 v4.1.1.",
+    "category": "Standards Updates",
+    "jurisdiction": "International",
+    "countryCode": "UN",
+    "date": "2026-09-10",
+    "sourceUrl": "https://www.w3.org/WAI/news/2026-09-10/wcag3/",
+    "sourceName": "W3C Web Accessibility Initiative (WAI)",
+    "id": "2026-09-10-w3c-publishes-updated-wcag-3-0-working-draft-for-"
+  },
+  {
     "title": "Deque breaks down what changed in EN 301 549 v4.1.1 and what teams should do",
     "summary": "Deque published a practitioner analysis of the finalised EN 301 549 v4.1.1, walking through the substantive clause changes versus the previous version and the practical steps development and testing teams should take.",
     "category": "Implementation & Testing Guidance",
