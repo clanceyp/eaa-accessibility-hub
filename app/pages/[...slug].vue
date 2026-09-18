@@ -16,7 +16,11 @@ useHead({
 </script>
 
 <template>
-  <div class="mx-auto max-w-3xl px-6 py-16">
-    <ContentRenderer v-if="page" :value="page" class="prose-content" />
+  <div v-if="page">
+    <section class="h-24 bg-eu-linemap md:h-48 xl:h-64" />
+
+    <div class="mx-auto max-w-3xl px-6 py-16">
+      <ContentRenderer :value="page" class="prose-content" />
+    </div>
   </div>
 </template>
