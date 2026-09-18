@@ -1,51 +1,58 @@
 [
   {
-    "id": "wad-enters-into-force",
-    "date": "2016-11-15",
-    "title": "Web Accessibility Directive enters into force",
-    "detail": "Directive (EU) 2016/2102, requiring accessible websites and mobile apps for public sector bodies, enters into force."
+    "title": "European Accessibility Act transitional period for existing products ends",
+    "detail": "Directive (EU) 2019/882 gives service providers a transitional period ending 28 June 2030, during which they may keep providing services using products that were lawfully in use before 28 June 2025; service contracts agreed before 28 June 2025 may also run on for no more than five years. After this date those legacy products and contracts must meet the Act's accessibility requirements, for which EN 301 549 provides the technical means of conformance.",
+    "date": "2030-06-28",
+    "id": "2030-06-28-european-accessibility-act-transitional-period-fo"
   },
   {
-    "id": "en301549-v212",
-    "date": "2018-08-01",
-    "title": "EN 301 549 V2.1.2 published",
-    "detail": "First version of EN 301 549 to align its web content requirements with WCAG 2.1."
+    "title": "Conflicting national standards to EN 301 549 V4.1.1 withdrawn (dow)",
+    "detail": "National standards that conflict with EN 301 549 V4.1.1 — including national editions of the older V3.2.1 — must be withdrawn by this date. After it, V4.1.1 (WCAG 2.2 AA based, with Annex ZA for the Web Accessibility Directive and Annex ZB for the European Accessibility Act) is the only national version of the standard in force.",
+    "date": "2028-05-31",
+    "id": "2028-05-31-conflicting-national-standards-to-en-301-549-v4-1"
   },
   {
-    "id": "wad-transposition-deadline",
-    "date": "2018-09-23",
-    "title": "Web Accessibility Directive: member state transposition deadline",
-    "detail": "EU member states are required to have transposed the Web Accessibility Directive into national law."
+    "title": "EN 301 549 V4.1.1 national adoption deadline (dop/e)",
+    "detail": "By this date the national standards bodies of CEN/CENELEC/ETSI members must publish EN 301 549 V4.1.1 as an identical national standard or endorse it. The date is fixed in the published standard, which also records its adoption on 24 August 2026 and a national announcement deadline (doa) of 30 November 2026.",
+    "date": "2027-05-31",
+    "id": "2027-05-31-en-301-549-v4-1-1-national-adoption-deadline-dop-"
   },
   {
-    "id": "eaa-adopted",
-    "date": "2019-04-17",
-    "title": "European Accessibility Act adopted",
-    "detail": "Directive (EU) 2019/882 on the accessibility requirements for products and services is formally adopted."
+    "id": "en301549-v411-oj-citation-expected",
+    "date": "2026-10-01",
+    "title": "EN 301 549 V4.1.1 expected to be cited in the EU Official Journal",
+    "detail": "Once cited in the Official Journal, V4.1.1 becomes the harmonised standard carrying presumption of conformity under the EAA, superseding V3.2.1. Expected around October 2026 — this date is a forecast, not confirmed; check the Official Journal directly before relying on it.",
+    "status": "expected"
   },
   {
-    "id": "wad-new-sites-deadline",
-    "date": "2019-09-23",
-    "title": "Web Accessibility Directive: new public sector websites must conform",
-    "detail": "All new public sector websites (published on or after 23 September 2018) must meet WCAG 2.1 AA."
+    "id": "en301549-v411-published",
+    "date": "2026-09-01",
+    "title": "EN 301 549 V4.1.1 published",
+    "detail": "Finalised version of EN 301 549, moving Clauses 9–11 to WCAG 2.2 AA. Not yet a cited harmonised standard under the EAA — see the expected Official Journal citation below. V3.2.1 (WCAG 2.1 AA) remains the version with legal effect until then."
   },
   {
-    "id": "en301549-v311",
-    "date": "2019-11-01",
-    "title": "EN 301 549 V3.1.1 published",
-    "detail": "Updated edition of EN 301 549, continuing WCAG 2.1 alignment."
+    "id": "en301549-v410-draft",
+    "date": "2025-11-01",
+    "title": "EN 301 549 V4.1.0 published as draft for public enquiry",
+    "detail": "Draft version updating Clauses 9–11 (web, non-web documents, software) to align with WCAG 2.2 AA (W3C Recommendation, December 2024), released for ETSI's public enquiry and vote ahead of finalisation."
   },
   {
-    "id": "wad-existing-sites-deadline",
-    "date": "2020-09-23",
-    "title": "Web Accessibility Directive: existing public sector websites must conform",
-    "detail": "All existing public sector websites must meet WCAG 2.1 AA."
+    "id": "eaa-application-deadline",
+    "date": "2025-06-28",
+    "title": "European Accessibility Act: compliance deadline for businesses",
+    "detail": "In-scope products and services placed on the EU market must meet EAA accessibility requirements from this date."
   },
   {
-    "id": "en301549-v321",
-    "date": "2021-03-01",
-    "title": "EN 301 549 V3.2.1 published",
-    "detail": "Refines WCAG 2.1 AA alignment across web, software and hardware clauses. Became the version in legal effect once cited in the Official Journal a few months later (see below)."
+    "id": "eaa-transposition-deadline",
+    "date": "2022-06-28",
+    "title": "European Accessibility Act: member state transposition deadline",
+    "detail": "EU member states must have adopted and published the laws, regulations and administrative provisions needed to comply with the EAA."
+  },
+  {
+    "id": "wad-monitoring-deadline",
+    "date": "2021-12-23",
+    "title": "Web Accessibility Directive: monitoring and reporting begins",
+    "detail": "Member states must have monitoring methodologies in place and begin publishing accessibility monitoring reports."
   },
   {
     "id": "en301549-v321-oj-citation",
@@ -60,40 +67,51 @@
     "detail": "All public sector mobile apps must meet WCAG 2.1 AA."
   },
   {
-    "id": "wad-monitoring-deadline",
-    "date": "2021-12-23",
-    "title": "Web Accessibility Directive: monitoring and reporting begins",
-    "detail": "Member states must have monitoring methodologies in place and begin publishing accessibility monitoring reports."
+    "id": "en301549-v321",
+    "date": "2021-03-01",
+    "title": "EN 301 549 V3.2.1 published",
+    "detail": "Refines WCAG 2.1 AA alignment across web, software and hardware clauses. Became the version in legal effect once cited in the Official Journal a few months later (see below)."
   },
   {
-    "id": "eaa-transposition-deadline",
-    "date": "2022-06-28",
-    "title": "European Accessibility Act: member state transposition deadline",
-    "detail": "EU member states must have adopted and published the laws, regulations and administrative provisions needed to comply with the EAA."
+    "id": "wad-existing-sites-deadline",
+    "date": "2020-09-23",
+    "title": "Web Accessibility Directive: existing public sector websites must conform",
+    "detail": "All existing public sector websites must meet WCAG 2.1 AA."
   },
   {
-    "id": "eaa-application-deadline",
-    "date": "2025-06-28",
-    "title": "European Accessibility Act: compliance deadline for businesses",
-    "detail": "In-scope products and services placed on the EU market must meet EAA accessibility requirements from this date."
+    "id": "en301549-v311",
+    "date": "2019-11-01",
+    "title": "EN 301 549 V3.1.1 published",
+    "detail": "Updated edition of EN 301 549, continuing WCAG 2.1 alignment."
   },
   {
-    "id": "en301549-v410-draft",
-    "date": "2025-11-01",
-    "title": "EN 301 549 V4.1.0 published as draft for public enquiry",
-    "detail": "Draft version updating Clauses 9–11 (web, non-web documents, software) to align with WCAG 2.2 AA (W3C Recommendation, December 2024), released for ETSI's public enquiry and vote ahead of finalisation."
+    "id": "wad-new-sites-deadline",
+    "date": "2019-09-23",
+    "title": "Web Accessibility Directive: new public sector websites must conform",
+    "detail": "All new public sector websites (published on or after 23 September 2018) must meet WCAG 2.1 AA."
   },
   {
-    "id": "en301549-v411-published",
-    "date": "2026-09-01",
-    "title": "EN 301 549 V4.1.1 published",
-    "detail": "Finalised version of EN 301 549, moving Clauses 9–11 to WCAG 2.2 AA. Not yet a cited harmonised standard under the EAA — see the expected Official Journal citation below. V3.2.1 (WCAG 2.1 AA) remains the version with legal effect until then."
+    "id": "eaa-adopted",
+    "date": "2019-04-17",
+    "title": "European Accessibility Act adopted",
+    "detail": "Directive (EU) 2019/882 on the accessibility requirements for products and services is formally adopted."
   },
   {
-    "id": "en301549-v411-oj-citation-expected",
-    "date": "2026-10-01",
-    "title": "EN 301 549 V4.1.1 expected to be cited in the EU Official Journal",
-    "detail": "Once cited in the Official Journal, V4.1.1 becomes the harmonised standard carrying presumption of conformity under the EAA, superseding V3.2.1. Expected around October 2026 — this date is a forecast, not confirmed; check the Official Journal directly before relying on it.",
-    "status": "expected"
+    "id": "wad-transposition-deadline",
+    "date": "2018-09-23",
+    "title": "Web Accessibility Directive: member state transposition deadline",
+    "detail": "EU member states are required to have transposed the Web Accessibility Directive into national law."
+  },
+  {
+    "id": "en301549-v212",
+    "date": "2018-08-01",
+    "title": "EN 301 549 V2.1.2 published",
+    "detail": "First version of EN 301 549 to align its web content requirements with WCAG 2.1."
+  },
+  {
+    "id": "wad-enters-into-force",
+    "date": "2016-11-15",
+    "title": "Web Accessibility Directive enters into force",
+    "detail": "Directive (EU) 2016/2102, requiring accessible websites and mobile apps for public sector bodies, enters into force."
   }
 ]
