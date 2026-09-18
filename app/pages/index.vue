@@ -44,7 +44,7 @@ useHead({
         </h1>
         <p class="mt-6 max-w-xl text-lg text-white/85">
           Clause-by-clause reference, WCAG mappings, and EU enforcement
-          news for developers and testers working to EN 301 549 — the
+          news for developers and testers working to EN 301 549 - the
           standard behind the European Accessibility Act.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
@@ -67,7 +67,7 @@ useHead({
       <p class="mb-10 max-w-2xl text-muted">
         Rulings and enforcement, regulatory guidance, standards updates,
         testing guidance, monitoring reports, research, vendor conformance,
-        procurement notices and training — everything happening across the
+        procurement notices and training - everything happening across the
         EN 301 549 ecosystem, in one feed.
       </p>
 
