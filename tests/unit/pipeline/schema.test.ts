@@ -64,7 +64,9 @@ describe('newsEntrySchema', () => {
 const validTimelineDraft = {
   title: 'EN 301 549 V4.1.1 published',
   detail: 'Finalised version of EN 301 549, moving Clauses 9-11 to WCAG 2.2 AA.',
-  date: '2026-09-01'
+  date: '2026-09-01',
+  sourceUrl: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf',
+  sourceName: 'ETSI'
 }
 
 describe('timelineDraftSchema', () => {
@@ -84,6 +86,16 @@ describe('timelineDraftSchema', () => {
 
   it('rejects a non-ISO date', () => {
     const result = timelineDraftSchema.safeParse({ ...validTimelineDraft, date: '2026/09/01' })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects a sourceUrl that is not a valid URL', () => {
+    const result = timelineDraftSchema.safeParse({ ...validTimelineDraft, sourceUrl: 'etsi.org' })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects an empty sourceName', () => {
+    const result = timelineDraftSchema.safeParse({ ...validTimelineDraft, sourceName: '' })
     expect(result.success).toBe(false)
   })
 })

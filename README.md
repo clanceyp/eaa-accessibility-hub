@@ -133,14 +133,16 @@ Run it locally:
 ```bash
 cp .env.example .env   # fill in GITHUB_TOKEN, ANTHROPIC_API_KEY, GITHUB_OWNER, GITHUB_REPO
 npm run update:news
+npm run update:timeline
 ```
 
-On Vercel, `/api/cron/update-news` runs the same pipeline, triggered
+On Vercel, `/api/cron/update-news` runs the news pipeline, triggered
 nightly by the Vercel Cron job defined in `vercel.json` (`0 3 * * *`, i.e.
-03:00 UTC). The timeline pipeline has no scheduled trigger yet — timeline
-milestones are rare enough that it's run manually when needed (currently
-no `update:timeline` script exists; add one following `update-news.ts` as
-a template if that changes).
+03:00 UTC). The timeline pipeline has no scheduled trigger — timeline
+milestones are rare enough (new EN 301 549 versions, Official Journal
+citations, WAD/EAA deadlines) that `npm run update:timeline` is just run
+manually when needed. Also see the `/update-timeline` skill
+(`.claude/skills/update-timeline/`), which wraps this same workflow.
 
 **Important:** the pipeline reads the *current* `data/news.json` via the
 GitHub Contents API (not the local filesystem), so it always diffs against
@@ -210,8 +212,9 @@ from the repo automatically.
 
 - No custom domain chosen yet (see chat history for candidate `.eu`/`.dev`
   domain suggestions)
-- No `update:timeline` script/cron — timeline updates are run ad hoc
-  today; add a script + (optionally) a second cron entry if that changes
+- No timeline cron — `npm run update:timeline` exists and is run ad hoc;
+  add a second Vercel Cron entry (`/api/cron/update-timeline`, mirroring
+  the news one) only if milestones start needing more than manual runs
 - GitHub branch protection / required review on `main` is not yet
   confirmed — recommended, since the pipeline's only safety net is "a
   human merges the PR"
