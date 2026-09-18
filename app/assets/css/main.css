@@ -238,4 +238,8 @@
   article.bg-map[data-zone="SK" i] {
     background-image: url(/map/eu-borders-sk.svg);
   }
+
+  article.bg-map[data-zone="UN" i] {
+    background-image: none;
+  }
 }
