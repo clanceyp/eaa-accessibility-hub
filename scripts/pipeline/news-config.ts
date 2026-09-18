@@ -93,7 +93,12 @@ For each genuine finding, produce an object with:
   "Monitoring Reports", "Research & Analysis", "Product & Vendor
   Conformance", "Procurement & Tenders", "Training & Events", or
   "General News" — pick the single best match
-- jurisdiction: the country name, or "EU" for EU-level action
+- jurisdiction: the country name, "EU" for EU-level action, or
+  "International" for a development not tied to any single
+  country/the EU (e.g. a W3C or ISO publication)
+- countryCode: the ISO 3166-1 alpha-2 code matching jurisdiction (e.g.
+  "FR", "IT"), "EU" if jurisdiction is "EU", or "UN" if jurisdiction is
+  "International" — always a 2-letter uppercase code
 - date: the date of the action/publication, in YYYY-MM-DD format
 - sourceUrl: a real, checkable URL to the primary source
 - sourceName: the publisher or site name (e.g. "Bundesfachstelle Barrierefreiheit", "EDF")`

@@ -14,6 +14,8 @@ export const newsDraftSchema = z.object({
   summary: z.string().min(1),
   category: z.enum(NEWS_CATEGORIES),
   jurisdiction: z.string().min(1),
+  /** ISO 3166-1 alpha-2 code for jurisdiction, or "EU" for EU-level action */
+  countryCode: z.string().regex(/^[A-Z]{2}$/, 'countryCode must be a 2-letter uppercase code (or "EU")'),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'date must be YYYY-MM-DD'),
   sourceUrl: z.string().url(),
   sourceName: z.string().min(1)

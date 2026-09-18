@@ -12,6 +12,7 @@ const validNewsDraft = {
   summary: 'The Tribunal judiciaire de Caen ruled in favour of disability associations.',
   category: 'Rulings & Enforcement',
   jurisdiction: 'France',
+  countryCode: 'FR',
   date: '2026-06-04',
   sourceUrl: 'https://droitpluriel.fr/decision',
   sourceName: 'Droit Pluriel'
@@ -39,6 +40,11 @@ describe('newsDraftSchema', () => {
 
   it('rejects a sourceUrl that is not a valid URL', () => {
     const result = newsDraftSchema.safeParse({ ...validNewsDraft, sourceUrl: 'droitpluriel.fr' })
+    expect(result.success).toBe(false)
+  })
+
+  it.each(['fr', 'FRA', ''])('rejects an invalid countryCode %s', (countryCode) => {
+    const result = newsDraftSchema.safeParse({ ...validNewsDraft, countryCode })
     expect(result.success).toBe(false)
   })
 

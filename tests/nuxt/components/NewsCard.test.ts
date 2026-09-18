@@ -10,6 +10,7 @@ const franceEntry: NewsEntry = {
   summary: 'The Tribunal judiciaire de Caen ruled in favour of disability associations.',
   category: 'Rulings & Enforcement',
   jurisdiction: 'France',
+  countryCode: 'FR',
   date: '2026-06-04',
   sourceUrl: 'https://droitpluriel.fr/decision',
   sourceName: 'Droit Pluriel'

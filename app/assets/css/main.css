@@ -33,6 +33,13 @@
   background-position: center, center right -100px;
 }
 
+@utility bg-article-map {
+  background-image: url(/map/eu-borders-eu.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @layer base {
   body {
     @apply bg-white text-ink font-sans antialiased;
@@ -122,5 +129,117 @@
 
   .prose-content strong {
     @apply font-semibold text-ink;
+  }
+
+  article.bg-map {
+    @apply bg-article-map;
+  }
+
+  article.bg-map[data-zone="FR" i] {
+    background-image: url(/map/eu-borders-fr.svg);
+  }
+
+  article.bg-map[data-zone="AT" i] {
+    background-image: url(/map/eu-borders-at.svg);
+  }
+
+  article.bg-map[data-zone="BE" i] {
+    background-image: url(/map/eu-borders-be.svg);
+  }
+
+  article.bg-map[data-zone="BG" i] {
+    background-image: url(/map/eu-borders-bg.svg);
+  }
+
+  article.bg-map[data-zone="CY" i] {
+    background-image: url(/map/eu-borders-cy.svg);
+  }
+
+  article.bg-map[data-zone="CZ" i] {
+    background-image: url(/map/eu-borders-cz.svg);
+  }
+
+  article.bg-map[data-zone="DE" i] {
+    background-image: url(/map/eu-borders-de.svg);
+  }
+
+  article.bg-map[data-zone="DK" i] {
+    background-image: url(/map/eu-borders-dk.svg);
+  }
+
+  article.bg-map[data-zone="EE" i] {
+    background-image: url(/map/eu-borders-ee.svg);
+  }
+
+  article.bg-map[data-zone="ES" i] {
+    background-image: url(/map/eu-borders-es.svg);
+  }
+
+  article.bg-map[data-zone="FI" i] {
+    background-image: url(/map/eu-borders-fi.svg);
+  }
+
+  article.bg-map[data-zone="GR" i] {
+    background-image: url(/map/eu-borders-gr.svg);
+  }
+
+  article.bg-map[data-zone="HR" i] {
+    background-image: url(/map/eu-borders-hr.svg);
+  }
+
+  article.bg-map[data-zone="HU" i] {
+    background-image: url(/map/eu-borders-hu.svg);
+  }
+
+  article.bg-map[data-zone="IE" i] {
+    background-image: url(/map/eu-borders-ie.svg);
+  }
+
+  article.bg-map[data-zone="IT" i] {
+    background-image: url(/map/eu-borders-it.svg);
+  }
+
+  article.bg-map[data-zone="LT" i] {
+    background-image: url(/map/eu-borders-lt.svg);
+  }
+
+  article.bg-map[data-zone="LU" i] {
+    background-image: url(/map/eu-borders-lu.svg);
+  }
+
+  article.bg-map[data-zone="LV" i] {
+    background-image: url(/map/eu-borders-lv.svg);
+  }
+
+  article.bg-map[data-zone="NL" i] {
+    background-image: url(/map/eu-borders-nl.svg);
+  }
+
+  article.bg-map[data-zone="PL" i] {
+    background-image: url(/map/eu-borders-pl.svg);
+  }
+
+  article.bg-map[data-zone="PT" i] {
+    background-image: url(/map/eu-borders-pt.svg);
+  }
+
+  article.bg-map[data-zone="RO" i] {
+    background-image: url(/map/eu-borders-ro.svg);
+  }
+
+  article.bg-map[data-zone="SE" i] {
+    background-image: url(/map/eu-borders-se.svg);
+  }
+
+  article.bg-map[data-zone="SI" i] {
+    background-image: url(/map/eu-borders-si.svg);
+  }
+
+  article.bg-map[data-zone="SK" i] {
+    background-image: url(/map/eu-borders-sk.svg);
+  }
+
+  article.bg-map[data-zone="UN" i] {
+    background-image: none;
   }
 }
