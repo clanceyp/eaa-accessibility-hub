@@ -13,7 +13,7 @@ const flag = computed(() => jurisdictionFlagEmoji(props.entry.jurisdiction))
 </script>
 
 <template>
-  <article class="card flex flex-col">
+  <article class="card bg-map flex flex-col" :data-zone="entry.countryCode">
     <p class="mb-2 text-xs font-semibold tracking-wide text-primary uppercase">
       {{ entry.category }}
     </p>

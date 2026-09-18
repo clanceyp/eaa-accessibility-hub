@@ -10,6 +10,7 @@ export interface NewsEntry {
   date: string
   sourceUrl: string
   sourceName: string
+  countryCode: string
 }
 
 // Imported (not read from disk at runtime) so the data is bundled into the
