@@ -44,6 +44,17 @@
     "id": "2026-09-07-accessibleeu-european-commission-announces-update"
   },
   {
+    "title": "Law firm analysis flags expanded real-time text duties in EN 301 549 V4.1.1",
+    "summary": "Davis Wright Tremaine published a clause-level analysis of the newly released EN 301 549 V4.1.1, the technical standard underpinning European Accessibility Act conformance. It highlights that the new version modernises communications requirements, notably expanding real-time text (RTT) obligations beyond traditional point-to-point text telephony scenarios.",
+    "category": "Implementation & Testing Guidance",
+    "jurisdiction": "EU",
+    "countryCode": "EU",
+    "date": "2026-09-02",
+    "sourceUrl": "https://www.dwt.com/insights/2026/09/european-accessibility-act-ict-standards-update",
+    "sourceName": "Davis Wright Tremaine",
+    "id": "2026-09-02-law-firm-analysis-flags-expanded-real-time-text-d"
+  },
+  {
     "title": "ETSI publishes EN 301 549 V4.1.1, the new harmonised accessibility standard",
     "summary": "ETSI has published EN 301 549 V4.1.1 (dated 2026-09) as a Harmonised European Standard, superseding the previous version. It is the revision that emerged from the V4.1.0 draft and final draft cycle and is the reference standard for EU public sector and European Accessibility Act digital accessibility conformance.",
     "category": "Standards Updates",
