@@ -48,13 +48,19 @@ describe('API routes', async () => {
     expect(newsSearchMetaSchema.safeParse(meta).success).toBe(true)
   })
 
-  it('GET /sitemap.xml lists every static and content page with an absolute URL', async () => {
+  it('GET /sitemap.xml lists every static and content page with an absolute URL and a lastmod date', async () => {
     const xml = await $fetch<string>('/sitemap.xml')
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
     expect(xml).toContain('https://eaaa11yhub.eu/en301549/clause-9')
     expect(xml).toContain('https://eaaa11yhub.eu/timeline')
     expect(xml).toContain('https://eaaa11yhub.eu/accessibility-statement')
+
+    const lastmods = [...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((m) => m[1])
+    expect(lastmods.length).toBeGreaterThan(0)
+    for (const value of lastmods) {
+      expect(new Date(value!).toString()).not.toBe('Invalid Date')
+    }
   })
 
   it('renders the homepage with at least one news entry', async () => {
