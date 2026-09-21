@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 9: Web"
+title: "EN 301 549 - Clause 9: Web"
 description: Clause 9 incorporates WCAG 2.1 Level A and AA by reference for websites and web applications.
 ---
 

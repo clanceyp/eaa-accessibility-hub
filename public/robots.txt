@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow:
+
+Sitemap: https://eaaa11yhub.eu/sitemap.xml

@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 10: Non-web documents"
+title: "EN 301 549 - Clause 10: Non-web documents"
 description: Clause 10 applies WCAG-equivalent requirements to electronic documents like PDF, Word and ePub.
 ---
 

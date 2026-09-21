@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 8: Hardware"
+title: "EN 301 549 - Clause 8: Hardware"
 description: Physical accessibility requirements for ICT hardware — controls, connectors and tactile indicators.
 ---
 

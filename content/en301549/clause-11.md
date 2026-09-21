@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 11: Software"
+title: "EN 301 549 - Clause 11: Software"
 description: Clause 11 covers non-web software — native mobile apps, desktop applications and operating systems.
 ---
 

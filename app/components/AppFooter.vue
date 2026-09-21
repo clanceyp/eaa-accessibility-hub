@@ -18,7 +18,7 @@ const lastUpdated = computed(() => {
     <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[2fr_1fr_1fr]">
       <div>
         <p class="text-lg font-semibold">
-          EAA Accessibility Hub
+          EAA A11y Hub
         </p>
         <p class="mt-2 max-w-sm text-sm text-white/70">
           A reference and news hub for EN 301 549 and the European

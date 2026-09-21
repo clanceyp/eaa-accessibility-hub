@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 5: Generic requirements"
+title: "EN 301 549 - Clause 5: Generic requirements"
 description: Baseline accessibility requirements that apply across ICT types, regardless of delivery channel.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 6: Two-way voice communication"
+title: "EN 301 549 - Clause 6: Two-way voice communication"
 description: Real-time text and captioned-call requirements for ICT with two-way voice communication.
 ---
 

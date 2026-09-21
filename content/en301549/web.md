@@ -1,5 +1,5 @@
 ---
-title: EN 301 549 — Web
+title: EN 301 549 - Web
 description: What EN 301 549 requires for websites and web applications, and how it relates to WCAG.
 ---
 

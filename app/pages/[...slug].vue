@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { SITE_NAME } from '~~/shared/site'
+
 const route = useRoute()
 
 const { data: page } = await useAsyncData(route.path, () =>
@@ -9,9 +11,15 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
-useHead({
-  title: `${page.value.title} — EAA A11y Hub`,
-  meta: [{ name: 'description', content: page.value.description }]
+const pageTitle = `${page.value.title} - ${SITE_NAME}`
+const pageDescription = page.value.description
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'website'
 })
 </script>
 
