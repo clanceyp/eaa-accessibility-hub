@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 12: Documentation & support services"
+title: "EN 301 549 - Clause 12: Documentation & support services"
 description: Clause 12 requires that documentation and support services are themselves accessible.
 ---
 

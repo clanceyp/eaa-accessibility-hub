@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { NewsEntry } from '~~/server/api/news.get'
 import { NEWS_CATEGORIES } from '~~/shared/news-categories'
+import { SITE_NAME } from '~~/shared/site'
 
 const { data: news } = await useFetch<NewsEntry[]>('/api/news')
 
@@ -30,8 +31,15 @@ watch(selectedCategory, () => {
   filterAnnouncement.value = `${count} article${count === 1 ? '' : 's'}`
 })
 
-useHead({
-  title: 'EAA A11y Hub — EU accessibility legal & regulatory news'
+const pageTitle = `EU accessibility legal & regulatory news - ${SITE_NAME}`
+const pageDescription = 'Rulings, enforcement actions, regulatory guidance and standards updates for EN 301 549 and the European Accessibility Act, tracked for developers and testers across the EU.'
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'website'
 })
 </script>
 

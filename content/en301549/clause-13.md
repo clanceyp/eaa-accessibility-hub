@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 13: Relay & emergency service access"
+title: "EN 301 549 - Clause 13: Relay & emergency service access"
 description: Clause 13 ensures ICT with two-way communication doesn't block access to relay or emergency services.
 ---
 

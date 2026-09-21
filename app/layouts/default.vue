@@ -1,3 +1,34 @@
+<script setup lang="ts">
+import { SITE_NAME, SITE_OG_IMAGE, SITE_URL } from '~~/shared/site'
+
+const route = useRoute()
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: SITE_URL
+}
+
+useHead(() => ({
+  link: [{ rel: 'canonical', href: `${SITE_URL}${route.path}` }],
+  script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(websiteJsonLd) }]
+}))
+
+// Page-specific ogTitle/ogDescription are set per-page (see useSeoMeta
+// calls in each page); ogUrl/ogSiteName/ogImage are the same on every
+// page (one generic share image, not per-page renders), so they live
+// here once instead of being repeated everywhere.
+useSeoMeta({
+  ogSiteName: SITE_NAME,
+  ogUrl: () => `${SITE_URL}${route.path}`,
+  ogImage: SITE_OG_IMAGE,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: SITE_NAME
+})
+</script>
+
 <template>
   <div class="flex min-h-screen flex-col">
     <a

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { TimelineEntry } from '~~/server/api/timeline.get'
+import { SITE_NAME } from '~~/shared/site'
 
 const { data: entries } = await useFetch<TimelineEntry[]>('/api/timeline')
 
@@ -43,8 +44,15 @@ const lastEntryId = computed(() => {
   return lastGroup?.entries.at(-1)?.id
 })
 
-useHead({
-  title: 'Timeline — EAA A11y Hub'
+const pageTitle = `Timeline - ${SITE_NAME}`
+const pageDescription = 'Key milestones for EN 301 549 and the European Accessibility Act — standard versions, Web Accessibility Directive deadlines, and EAA compliance dates.'
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'website'
 })
 </script>
 

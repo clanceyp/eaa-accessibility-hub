@@ -1,6 +1,15 @@
 <script setup lang="ts">
-useHead({
-  title: 'EN 301 549 Overview - EAA A11y Hub'
+import { SITE_NAME } from '~~/shared/site'
+
+const pageTitle = `EN 301 549 Overview - ${SITE_NAME}`
+const pageDescription = 'How EN 301 549 is organised into clauses covering web, non-web documents and software, and how each clause maps to WCAG and the European Accessibility Act.'
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'website'
 })
 
 interface Clause {

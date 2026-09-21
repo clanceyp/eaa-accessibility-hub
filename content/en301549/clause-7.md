@@ -1,5 +1,5 @@
 ---
-title: "EN 301 549 — Clause 7: Video capabilities"
+title: "EN 301 549 - Clause 7: Video capabilities"
 description: Captioning, audio description and accessible media player requirements for ICT with video.
 ---
 

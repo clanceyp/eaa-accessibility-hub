@@ -1,5 +1,5 @@
 ---
-title: EN 301 549 — Non-web
+title: EN 301 549 - Non-web
 description: EN 301 549 requirements for native mobile apps, kiosks, self-service terminals, documents, and hardware.
 ---
 

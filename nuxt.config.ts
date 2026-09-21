@@ -5,6 +5,17 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  // Evaluated once when `nuxt build` runs, not per-request — content here
+  // only changes via a PR merge, which triggers a fresh build anyway, so
+  // this is an accurate "site last built" timestamp for sitemap.xml's
+  // <lastmod> rather than a per-request value that would drift from
+  // actual deploy time across serverless cold starts.
+  runtimeConfig: {
+    public: {
+      buildTime: new Date().toISOString()
+    }
+  },
+
   modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/eslint', '@vercel/analytics'],
 
   css: ['~/assets/css/main.css'],
