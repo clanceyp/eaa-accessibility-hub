@@ -85,6 +85,9 @@ describe('API routes', async () => {
     expect(html).toContain('property="og:type" content="website"')
     expect(html).toContain('property="og:site_name" content="EAA A11y Hub"')
     expect(html).toContain('property="og:url" content="https://eaaa11yhub.eu/"')
+    expect(html).toContain('property="og:image" content="https://eaaa11yhub.eu/eaa-a11y-hub-og.png"')
+    expect(html).toContain('property="og:image:width" content="1200"')
+    expect(html).toContain('property="og:image:height" content="630"')
     expect(html).not.toContain('twitter:')
   })
 

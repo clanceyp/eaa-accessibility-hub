@@ -6,3 +6,6 @@
 export const SITE_URL = 'https://eaaa11yhub.eu'
 
 export const SITE_NAME = 'EAA A11y Hub'
+
+/** Absolute URL — social platforms fetching og:image need it, not a relative path. */
+export const SITE_OG_IMAGE = `${SITE_URL}/eaa-a11y-hub-og.png`

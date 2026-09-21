@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SITE_NAME, SITE_URL } from '~~/shared/site'
+import { SITE_NAME, SITE_OG_IMAGE, SITE_URL } from '~~/shared/site'
 
 const route = useRoute()
 
@@ -16,11 +16,16 @@ useHead(() => ({
 }))
 
 // Page-specific ogTitle/ogDescription are set per-page (see useSeoMeta
-// calls in each page); ogUrl/ogSiteName are the same on every page, so
-// they live here once instead of being repeated everywhere.
+// calls in each page); ogUrl/ogSiteName/ogImage are the same on every
+// page (one generic share image, not per-page renders), so they live
+// here once instead of being repeated everywhere.
 useSeoMeta({
   ogSiteName: SITE_NAME,
-  ogUrl: () => `${SITE_URL}${route.path}`
+  ogUrl: () => `${SITE_URL}${route.path}`,
+  ogImage: SITE_OG_IMAGE,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: SITE_NAME
 })
 </script>
 
