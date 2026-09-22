@@ -20,7 +20,7 @@ const lastUpdated = computed(() => {
         <p class="text-lg font-semibold">
           EAA A11y Hub
         </p>
-        <p class="mt-2 max-w-sm text-sm text-white/70">
+        <p class="mt-2 max-w-sm text-sm text-white/70 text-wrap-pretty">
           A reference and news hub for EN 301 549 and the European
           Accessibility Act, for developers and testers working on digital
           accessibility compliance across the EU.
