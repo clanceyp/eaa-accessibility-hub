@@ -26,7 +26,8 @@ const lastUpdated = computed(() => {
           accessibility compliance across the EU.
         </p>
         <p class="mt-2 max-w-sm text-sm text-white/70">
-          Found a bug or have a suggestion? Report it on
+          Found a bug or have a suggestion?
+          <br/> Report it on
           <a
             href="https://github.com/clanceyp/eaa-accessibility-hub/issues"
             class="text-white/70 underline underline-offset-2 hover:text-white"
