@@ -80,7 +80,7 @@ const lastUpdated = computed(() => {
       </nav>
     </div>
 
-    <div class="border-t border-white/10 px-6 py-4 text-xs text-white/50">
+    <div class="border-t border-white/10 px-6 py-8 text-xs text-white/50">
       <p class="mx-auto max-w-6xl">
         © {{ year }} EAA A11y Hub. Not affiliated with ETSI, CEN, CENELEC or the European Commission.
         An
