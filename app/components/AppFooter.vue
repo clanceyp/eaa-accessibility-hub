@@ -25,6 +25,18 @@ const lastUpdated = computed(() => {
           Accessibility Act, for developers and testers working on digital
           accessibility compliance across the EU.
         </p>
+        <p class="mt-2 max-w-sm text-sm text-white/70">
+          Found a bug or have a suggestion? Report it on
+          <a
+            href="https://github.com/clanceyp/eaa-accessibility-hub/issues"
+            class="text-white/70 underline underline-offset-2 hover:text-white"
+            aria-label="Open the Github EAA A11y Hub project issues page in new tab"
+            rel="noopener noreferrer" target="_blank"
+          >
+            Github
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" class="inline-block" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </p>
         <p v-if="lastUpdated" class="mt-3 text-xs text-white/50">
           Last updated: <time :datetime="lastUpdated.iso">{{ lastUpdated.formatted }}</time>
         </p>
@@ -80,6 +92,7 @@ const lastUpdated = computed(() => {
       >
         Inclusive Interface
         <span class="sr-only">. opens in a new tab</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" class="inline-block" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
       </a>
       site.
     </div>
