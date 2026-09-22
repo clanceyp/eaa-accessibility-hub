@@ -64,6 +64,15 @@
     @apply inline-flex items-center gap-2 rounded-full border-2 border-white px-5 py-2.5 font-medium text-white transition-colors hover:bg-white hover:text-primary;
   }
 
+  /*
+   * The default :focus-visible outline (--color-primary-light) doesn't
+   * have enough contrast against this button's blue-section background,
+   * so it needs its own white outline instead.
+   */
+  .btn-outline:focus-visible {
+    outline-color: white;
+  }
+
   .btn-outline-dark {
     @apply inline-flex items-center gap-2 rounded-full border-2 border-primary px-5 py-2.5 font-medium text-primary transition-colors hover:bg-primary hover:text-white;
   }
