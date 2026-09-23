@@ -49,7 +49,7 @@ const lastUpdated = computed(() => {
         </p>
         <ul class="mt-3 space-y-2 text-sm">
           <li><NuxtLink to="/" class="text-white no-underline hover:underline">Home</NuxtLink></li>
-          <li><NuxtLink to="/en301549" class="text-white no-underline hover:underline">Overview - EN 301 549</NuxtLink>
+          <li><NuxtLink to="/en301549" class="text-white no-underline hover:underline">Overview</NuxtLink>
           <ul class="ml-4 mt-3 space-y-2">
             <li><NuxtLink to="/en301549/web" class="text-white no-underline hover:underline">Web</NuxtLink></li>
             <li><NuxtLink to="/en301549/non-web" class="text-white no-underline hover:underline">Non-web</NuxtLink></li>
