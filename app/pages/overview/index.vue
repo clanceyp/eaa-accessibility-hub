@@ -33,6 +33,12 @@ const resources: Resource[] = [
     sourceName: 'ETSI'
   },
   {
+    title: 'EN 301 549 V4.1.1 (full standard, PDF)',
+    description: "The newer edition, published by ETSI but not yet cited in the EU Official Journal - so not yet in legal effect. See what's coming in V4.1.1 for what it changes and when it's expected to take over from V3.2.1.",
+    url: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf',
+    sourceName: 'ETSI'
+  },
+  {
     title: 'European Accessibility Act - official overview',
     description: "The European Commission's own page on the EAA: scope, covered products and services, implementation timeline and micro-enterprise exemptions.",
     url: 'https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en',
