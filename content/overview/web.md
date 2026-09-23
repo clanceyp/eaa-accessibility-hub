@@ -13,9 +13,9 @@ web content.
 
 ## How it relates to WCAG
 
-For websites and web applications, **Clause 9** of EN 301 549 incorporates
+For websites and web applications, **Clause 9** of EN 301 549 V3.2.1 incorporates
 the Web Content Accessibility Guidelines (WCAG) by reference. In practice,
-meeting EN 301 549's web requirements means meeting **WCAG 2.1 Level AA**
+meeting EN 301 549 V3.2.1's web requirements means meeting **WCAG 2.1 Level AA**
 (later versions of the standard move toward WCAG 2.2 AA).
 
 That means the familiar four WCAG principles apply:
