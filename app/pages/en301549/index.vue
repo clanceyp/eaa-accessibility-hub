@@ -114,8 +114,9 @@ const supportingClauses: Clause[] = [
         <p class="mt-4 max-w-2xl text-white/85">
           The European standard for ICT accessibility, referenced by the
           Web Accessibility Directive and the European Accessibility Act.
-          Here's how its clauses map onto web content, documents and
-          software.
+          This overview covers <strong>V3.2.1</strong>, the edition with
+          current legal effect - here's how its clauses map onto web
+          content, documents and software.
         </p>
       </div>
     </section>
