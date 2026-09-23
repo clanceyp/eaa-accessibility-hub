@@ -86,6 +86,12 @@ Both `news.json` and `timeline.json` are updated by scripts that:
 
 **`news.json`** — runs **nightly**, triggered by Vercel Cron (Hobby plan
 allows up to 2 cron jobs/project, once-per-day frequency — sufficient).
+It can also be run manually via the `update-news` skill/CLI
+(`npm run update:news:local`), which works from a local git branch
+instead of the GitHub API and always opens a PR — even when no new
+entries are found — since it still needs to land the refreshed search
+date somewhere. See `scripts/pipeline/run-update.ts`
+(`runPipelineUpdate` vs `runPipelineUpdateLocal`).
 
 **`timeline.json`** — runs **manually**, as a local CLI command Patrick
 triggers occasionally (timeline events are rare, so no schedule needed).
