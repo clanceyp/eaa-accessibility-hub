@@ -3,7 +3,7 @@ title: "EN 301 549 - What's coming in V4.1.1"
 description: A newer edition of EN 301 549 has been published but isn't in legal effect yet - what's changing, and when it's expected to take over from V3.2.1.
 ---
 
-# What's coming in EN 301 549 V4.1.1
+# EN 301 549 V4.1.1: what's changing and when
 
 Every clause page on this site is written against **V3.2.1** - the
 edition currently cited in the EU Official Journal, and so the version
