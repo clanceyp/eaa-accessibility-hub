@@ -1,9 +1,9 @@
 ---
-title: EN 301 549 - Web
-description: What EN 301 549 requires for websites and web applications, and how it relates to WCAG.
+title: EN 301 549 V3.2.1 - Web
+description: What EN 301 549 V3.2.1 requires for websites and web applications, and how it relates to WCAG.
 ---
 
-# EN 301 549 — Web
+# EN 301 549 V3.2.1 - Web
 
 EN 301 549 is the European standard for accessibility requirements suitable
 for public procurement of ICT products and services. It is the technical

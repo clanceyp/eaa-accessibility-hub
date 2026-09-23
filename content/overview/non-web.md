@@ -1,9 +1,9 @@
 ---
-title: EN 301 549 - Non-web
-description: EN 301 549 requirements for native mobile apps, kiosks, self-service terminals, documents, and hardware.
+title: EN 301 549 V3.2.1 - Non-web
+description: EN 301 549 V3.2.1 requirements for native mobile apps, kiosks, self-service terminals, documents, and hardware.
 ---
 
-# EN 301 549 — Non-web
+# EN 301 549 V3.2.1 - Non-web
 
 Away from the browser, EN 301 549 still applies — to native mobile apps,
 self-service terminals and kiosks, electronic documents, and physical
