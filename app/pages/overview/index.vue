@@ -166,7 +166,7 @@ const supportingClauses: Clause[] = [
         <li class="h-full">
           <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
-              <NuxtLink to="/en301549/web" class="text-inherit no-underline outline-none">
+              <NuxtLink to="/overview/web" class="text-inherit no-underline outline-none">
                 Web →
               </NuxtLink>
             </h3>
@@ -179,7 +179,7 @@ const supportingClauses: Clause[] = [
         <li class="h-full">
           <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
-              <NuxtLink to="/en301549/non-web" class="text-inherit no-underline outline-none">
+              <NuxtLink to="/overview/non-web" class="text-inherit no-underline outline-none">
                 Non-web →
               </NuxtLink>
             </h3>
@@ -192,7 +192,7 @@ const supportingClauses: Clause[] = [
         <li class="h-full">
           <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
-              <NuxtLink to="/en301549/whats-coming-in-v4-1-1" class="text-inherit no-underline outline-none">
+              <NuxtLink to="/overview/whats-coming-in-v4-1-1" class="text-inherit no-underline outline-none">
                 What's coming in V4.1.1 →
               </NuxtLink>
             </h3>

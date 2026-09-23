@@ -3,7 +3,7 @@ import { SITE_URL } from '../../shared/site'
 
 // Pages that aren't part of the @nuxt/content collection (they're plain
 // Vue pages, not Markdown files under content/).
-const staticPaths = ['/', '/timeline', '/en301549']
+const staticPaths = ['/', '/timeline', '/overview']
 
 function toUrlEntry(path: string, lastmod: string): string {
   return `<url><loc>${SITE_URL}${path}</loc><lastmod>${lastmod}</lastmod></url>`

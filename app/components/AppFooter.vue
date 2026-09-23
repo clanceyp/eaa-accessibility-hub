@@ -49,19 +49,19 @@ const lastUpdated = computed(() => {
         </p>
         <ul class="mt-3 space-y-2 text-sm">
           <li><NuxtLink to="/" class="text-white no-underline hover:underline">Home</NuxtLink></li>
-          <li><NuxtLink to="/en301549" class="text-white no-underline hover:underline">Overview</NuxtLink>
+          <li><NuxtLink to="/overview" class="text-white no-underline hover:underline">Overview</NuxtLink>
           <ul class="ml-4 mt-3 space-y-2">
-            <li><NuxtLink to="/en301549/web" class="text-white no-underline hover:underline">Web</NuxtLink></li>
-            <li><NuxtLink to="/en301549/non-web" class="text-white no-underline hover:underline">Non-web</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-5" class="text-white no-underline hover:underline">Clause 5</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-6" class="text-white no-underline hover:underline">Clause 6</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-7" class="text-white no-underline hover:underline">Clause 7</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-8" class="text-white no-underline hover:underline">Clause 8</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-9" class="text-white no-underline hover:underline">Clause 9</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-10" class="text-white no-underline hover:underline">Clause 10</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-11" class="text-white no-underline hover:underline">Clause 11</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-12" class="text-white no-underline hover:underline">Clause 12</NuxtLink></li>
-            <li><NuxtLink to="/en301549/clause-13" class="text-white no-underline hover:underline">Clause 13</NuxtLink></li>
+            <li><NuxtLink to="/overview/web" class="text-white no-underline hover:underline">Web</NuxtLink></li>
+            <li><NuxtLink to="/overview/non-web" class="text-white no-underline hover:underline">Non-web</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-5" class="text-white no-underline hover:underline">Clause 5</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-6" class="text-white no-underline hover:underline">Clause 6</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-7" class="text-white no-underline hover:underline">Clause 7</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-8" class="text-white no-underline hover:underline">Clause 8</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-9" class="text-white no-underline hover:underline">Clause 9</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-10" class="text-white no-underline hover:underline">Clause 10</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-11" class="text-white no-underline hover:underline">Clause 11</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-12" class="text-white no-underline hover:underline">Clause 12</NuxtLink></li>
+            <li><NuxtLink to="/overview/clause-13" class="text-white no-underline hover:underline">Clause 13</NuxtLink></li>
             </ul>
           </li>
           <li><NuxtLink to="/timeline" class="text-white no-underline hover:underline">Timeline</NuxtLink></li>

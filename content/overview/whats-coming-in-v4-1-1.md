@@ -42,7 +42,7 @@ reworked, and the standard's EAA and Web Accessibility Directive annexes
 have been updated to map against the revised clauses.
 
 For clause-by-clause detail beyond this summary, see the standard
-itself — linked below — or the [EN 301 549 overview](/en301549) for how
+itself — linked below — or the [EN 301 549 overview](/overview) for how
 V3.2.1's clause structure (which V4.1.1 keeps) fits together.
 
 ## When it takes effect
@@ -78,5 +78,5 @@ sourcing on each date above.
 
 For the version currently in legal effect, see
 [EN 301 549 V3.2.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf)
-instead, or the [EN 301 549 overview](/en301549) for a plain-language
+instead, or the [EN 301 549 overview](/overview) for a plain-language
 walkthrough of its clauses.

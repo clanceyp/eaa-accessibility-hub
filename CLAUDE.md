@@ -23,8 +23,8 @@ needed to serve static pages.
 | Route | Purpose |
 |---|---|
 | `/` | Home — lists latest entries from `data/news.json` |
-| `/en301549/web` | EN 301 549 Web overview |
-| `/en301549/non-web` | EN 301 549 Non-web overview (mobile apps, kiosks, docs, etc.) |
+| `/overview/web` | EN 301 549 Web overview |
+| `/overview/non-web` | EN 301 549 Non-web overview (mobile apps, kiosks, docs, etc.) |
 | `/timeline` | EAA / EN 301 549 milestones, from `data/timeline.json` |
 | `/accessibility-statement` | Accessibility Statement |
 | `/terms` | Terms & Conditions |

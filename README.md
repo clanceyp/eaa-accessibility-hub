@@ -47,7 +47,7 @@ to run the update pipeline (see below).
 
 ```
 app/                   Nuxt app (pages, components, layouts)
-  pages/                index.vue (news), timeline.vue, en301549/,
+  pages/                index.vue (news), timeline.vue, overview/,
                          [...slug].vue (catch-all renderer for content/)
 content/                Markdown reference pages (EN 301 549 clauses,
                          legal pages) rendered via @nuxt/content

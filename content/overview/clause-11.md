@@ -30,7 +30,7 @@ scope of the EAA and the Web Accessibility Directive's mobile app
 requirements.
 
 For the fuller narrative on native apps, kiosks and related non-web
-scope, see the [Non-web overview](/en301549/non-web).
+scope, see the [Non-web overview](/overview/non-web).
 
 ## Read the standard
 
@@ -42,5 +42,5 @@ full requirement wording, see **EN 301 549 V3.2.1 (2021-03)** directly:
 V3.2.1 (WCAG 2.1 AA) is the version cited in the EU Official Journal and
 currently has legal effect for EAA presumption of conformity. A newer
 edition, **V4.1.1** (WCAG 2.2 AA), has been published but is not yet
-cited — see [what's coming in V4.1.1](/en301549/whats-coming-in-v4-1-1)
+cited — see [what's coming in V4.1.1](/overview/whats-coming-in-v4-1-1)
 for what's changing and when it's expected to take effect.
