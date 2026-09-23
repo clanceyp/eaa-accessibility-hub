@@ -27,9 +27,9 @@ interface Resource {
 
 const resources: Resource[] = [
   {
-    title: 'EN 301 549 V4.1.1 (full standard, PDF)',
-    description: 'The normative text itself, published by ETSI. Everything on this site is a plain-language summary of this document - check it directly for anything you need to cite or rely on formally.',
-    url: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf',
+    title: 'EN 301 549 V3.2.1 (full standard, PDF)',
+    description: 'The normative text itself, published by ETSI. This is the version cited in the EU Official Journal and currently in legal effect - everything on this site is a plain-language summary of this document, so check it directly for anything you need to cite or rely on formally.',
+    url: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf',
     sourceName: 'ETSI'
   },
   {
@@ -161,7 +161,7 @@ const supportingClauses: Clause[] = [
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
         Go deeper
       </h2>
-      <ul class="grid gap-6 md:grid-cols-2">
+      <ul class="grid gap-6 md:grid-cols-3">
         <li class="h-full">
           <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
@@ -185,6 +185,20 @@ const supportingClauses: Clause[] = [
             <p class="text-sm leading-relaxed text-muted">
               Native apps, kiosks, hardware, documents and support
               services under Clauses 5–8 and 10–13.
+            </p>
+          </div>
+        </li>
+        <li class="h-full">
+          <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
+            <h3 class="mb-2 text-xl font-medium text-navy">
+              <NuxtLink to="/en301549/whats-coming-in-v4-1-1" class="text-inherit no-underline outline-none">
+                What's coming in V4.1.1 →
+              </NuxtLink>
+            </h3>
+            <p class="text-sm leading-relaxed text-muted">
+              A newer edition of the standard has been published but isn't
+              in legal effect yet - what's changing, and when it's
+              expected to take over.
             </p>
           </div>
         </li>
