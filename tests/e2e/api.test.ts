@@ -52,7 +52,7 @@ describe('API routes', async () => {
     const xml = await $fetch<string>('/sitemap.xml')
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
-    expect(xml).toContain('https://eaaa11yhub.eu/en301549/clause-9')
+    expect(xml).toContain('https://eaaa11yhub.eu/overview/clause-9')
     expect(xml).toContain('https://eaaa11yhub.eu/timeline')
     expect(xml).toContain('https://eaaa11yhub.eu/accessibility-statement')
 

@@ -13,7 +13,7 @@ defineProps<{
     <span class="tag mb-3" aria-hidden="true">Clause {{ number }}</span>
     <h3 class="mb-2 text-lg font-medium text-navy">
       <NuxtLink
-        :to="`/en301549/clause-${number}`"
+        :to="`/overview/clause-${number}`"
         class="text-inherit no-underline outline-none"
         :aria-label="`Clause ${number} ${title}`"
       >

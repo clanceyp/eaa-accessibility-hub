@@ -56,8 +56,8 @@ useSeoMeta({
           standard behind the European Accessibility Act.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <NuxtLink to="/en301549" class="btn-outline">
-            EN 301 549 overview
+          <NuxtLink to="/overview" class="btn-outline">
+            EN 301 549 V3.2.1 overview
             <span aria-hidden="true">→</span>
           </NuxtLink>
           <NuxtLink to="/timeline" class="btn-outline">

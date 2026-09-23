@@ -21,8 +21,8 @@ const open = ref(false)
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/en301549" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium underline underline-offset-4">
-              Overview - EN 301 549
+            <NuxtLink to="/overview" class="text-ink no-underline hover:text-primary" active-class="text-primary font-medium underline underline-offset-4">
+              Overview
             </NuxtLink>
           </li>
           <li>
@@ -60,8 +60,8 @@ const open = ref(false)
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/en301549" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" active-class="text-primary font-medium underline underline-offset-4" @click="open = false">
-            Overview - EN 301 549
+          <NuxtLink to="/overview" class="rounded px-2 py-2 text-ink no-underline hover:bg-tint" active-class="text-primary font-medium underline underline-offset-4" @click="open = false">
+            Overview
           </NuxtLink>
         </li>
         <li>

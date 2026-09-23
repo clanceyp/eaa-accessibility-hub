@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SITE_NAME } from '~~/shared/site'
 
-const pageTitle = `EN 301 549 Overview - ${SITE_NAME}`
+const pageTitle = `EN 301 549 V3.2.1 Overview - ${SITE_NAME}`
 const pageDescription = 'How EN 301 549 is organised into clauses covering web, non-web documents and software, and how each clause maps to WCAG and the European Accessibility Act.'
 
 useSeoMeta({
@@ -27,8 +27,14 @@ interface Resource {
 
 const resources: Resource[] = [
   {
+    title: 'EN 301 549 V3.2.1 (full standard, PDF)',
+    description: 'The normative text itself, published by ETSI. This is the version cited in the EU Official Journal and currently in legal effect - everything on this site is a plain-language summary of this document, so check it directly for anything you need to cite or rely on formally.',
+    url: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf',
+    sourceName: 'ETSI'
+  },
+  {
     title: 'EN 301 549 V4.1.1 (full standard, PDF)',
-    description: 'The normative text itself, published by ETSI. Everything on this site is a plain-language summary of this document - check it directly for anything you need to cite or rely on formally.',
+    description: "The newer edition, published by ETSI but not yet cited in the EU Official Journal - so not yet in legal effect. See what's coming in V4.1.1 for what it changes and when it's expected to take over from V3.2.1.",
     url: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf',
     sourceName: 'ETSI'
   },
@@ -109,20 +115,21 @@ const supportingClauses: Clause[] = [
     <section class="relative overflow-hidden bg-eu-linemap text-white">
       <div class="relative z-10 mx-auto max-w-6xl px-6 py-16">
         <h1 class="text-5xl font-light">
-          Overview - EN 301 549
+          Overview - EN 301 549 V3.2.1
         </h1>
         <p class="mt-4 max-w-2xl text-white/85">
           The European standard for ICT accessibility, referenced by the
           Web Accessibility Directive and the European Accessibility Act.
-          Here's how its clauses map onto web content, documents and
-          software.
+          This overview covers <strong>V3.2.1</strong>, the edition with
+          current legal effect - here's how its clauses map onto web
+          content, documents and software.
         </p>
       </div>
     </section>
 
     <section class="mx-auto max-w-6xl px-6 py-16">
       <p class="max-w-3xl leading-relaxed text-muted">
-        EN 301 549 is organised into numbered clauses rather than a single
+        EN 301 549 V3.2.1 is organised into numbered clauses rather than a single
         flat checklist. Four clauses carry almost all of the day-to-day
         content requirements - <strong class="text-ink">Clause 9</strong>
         for web, <strong class="text-ink">Clause 10</strong> for non-web
@@ -161,11 +168,11 @@ const supportingClauses: Clause[] = [
       <h2 class="mt-12 mb-6 text-2xl font-medium text-navy">
         Go deeper
       </h2>
-      <ul class="grid gap-6 md:grid-cols-2">
+      <ul class="grid gap-6 md:grid-cols-3">
         <li class="h-full">
           <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
-              <NuxtLink to="/en301549/web" class="text-inherit no-underline outline-none">
+              <NuxtLink to="/overview/web" class="text-inherit no-underline outline-none">
                 Web →
               </NuxtLink>
             </h3>
@@ -178,13 +185,27 @@ const supportingClauses: Clause[] = [
         <li class="h-full">
           <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
             <h3 class="mb-2 text-xl font-medium text-navy">
-              <NuxtLink to="/en301549/non-web" class="text-inherit no-underline outline-none">
+              <NuxtLink to="/overview/non-web" class="text-inherit no-underline outline-none">
                 Non-web →
               </NuxtLink>
             </h3>
             <p class="text-sm leading-relaxed text-muted">
               Native apps, kiosks, hardware, documents and support
               services under Clauses 5–8 and 10–13.
+            </p>
+          </div>
+        </li>
+        <li class="h-full">
+          <div class="card h-full has-[a:focus-visible]:outline has-[a:focus-visible]:outline-[3px] has-[a:focus-visible]:outline-primary-light has-[a:focus-visible]:outline-offset-2">
+            <h3 class="mb-2 text-xl font-medium text-navy">
+              <NuxtLink to="/overview/whats-coming-in-v4-1-1" class="text-inherit no-underline outline-none">
+                What's coming in V4.1.1 →
+              </NuxtLink>
+            </h3>
+            <p class="text-sm leading-relaxed text-muted">
+              A newer edition of the standard has been published but isn't
+              in legal effect yet - what's changing, and when it's
+              expected to take over.
             </p>
           </div>
         </li>
