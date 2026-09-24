@@ -44,6 +44,17 @@
     "id": "2026-09-07-accessibleeu-european-commission-announces-update"
   },
   {
+    "title": "Practitioner guide breaks down what EN 301 549 v4.1.1 changes for web content and documents",
+    "summary": "Following ETSI's publication of EN 301 549 v4.1.1, a practitioner guide sets out which clauses changed for websites, apps and electronic documents, and what teams need to re-test against the new version.",
+    "category": "Implementation & Testing Guidance",
+    "jurisdiction": "EU",
+    "countryCode": "EU",
+    "date": "2026-09-04",
+    "sourceUrl": "https://www.webyes.com/blogs/en-301-549-v4-1-0-update/",
+    "sourceName": "Webyes",
+    "id": "2026-09-04-practitioner-guide-breaks-down-what-en-301-549-v4"
+  },
+  {
     "title": "Law firm analysis flags expanded real-time text duties in EN 301 549 V4.1.1",
     "summary": "Davis Wright Tremaine published a clause-level analysis of the newly released EN 301 549 V4.1.1, the technical standard underpinning European Accessibility Act conformance. It highlights that the new version modernises communications requirements, notably expanding real-time text (RTT) obligations beyond traditional point-to-point text telephony scenarios.",
     "category": "Implementation & Testing Guidance",
@@ -64,6 +75,17 @@
     "sourceUrl": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
     "sourceName": "ETSI",
     "id": "2026-09-01-etsi-publishes-en-301-549-v4-1-1-the-new-harmonis"
+  },
+  {
+    "title": "State of Web Accessibility 2026 research report published",
+    "summary": "A large-scale research report analysed 50,000 websites against WCAG 2.2 A/AA and found 64.55% still not fully compliant, with breakdowns by region, industry sector and platform (WordPress, Shopify, Magento and others).",
+    "category": "Research & Analysis",
+    "jurisdiction": "International",
+    "countryCode": "UN",
+    "date": "2026-07-28",
+    "sourceUrl": "https://www.accessibilitychecker.org/research-papers/the-state-of-web-accessibility-in-2026-research-report/",
+    "sourceName": "AccessibilityChecker.org",
+    "id": "2026-07-28-state-of-web-accessibility-2026-research-report-p"
   },
   {
     "id": "carrefour-france-accessibility-ruling-2026",
