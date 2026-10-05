@@ -19,15 +19,19 @@ writes to `main` directly.
 
 ## Steps
 
-1. **Check the codebase is ready.** Run `git fetch origin main`, then
-   confirm all three:
-   - Current branch is `main`
-   - Working tree is clean (`git status` shows nothing to commit)
-   - Local `main` matches `origin/main` (not ahead, not behind)
-
-   If any of these aren't true, stop and ask the user what to do —
-   don't branch off dirty or stale state, and don't fix it yourself
-   (e.g. don't stash, pull, or discard changes without asking first).
+1. **Check the codebase is ready.**
+   - If the current branch isn't `main`, **stop** and report why (which
+     branch you're on) — don't switch branches yourself.
+   - If it is `main`, run `git fetch origin main` then `git pull`
+     (fast-forward only) to bring it up to date automatically.
+   - After pulling, confirm the working tree is clean (`git status`
+     shows nothing to commit) and local `main` now matches
+     `origin/main` exactly. If the pull didn't fast-forward cleanly, or
+     the tree still isn't clean afterward (e.g. local changes blocked
+     the pull, or a merge conflict), **stop** and ask the user what to
+     do — don't stash, force anything, or discard changes yourself.
+   - Only continue to step 2 once `main` is confirmed clean and in
+     sync with `origin/main`.
 
 2. **Branch.** Create a new local branch off `main`, e.g.
    `news-update-<YYYY-MM-DD>`.
