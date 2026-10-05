@@ -1,5 +1,27 @@
 [
   {
+    "title": "Swedish regulator Digg finds accessibility failings on the Equality Ombudsman's website, including linked documents",
+    "summary": "On 29 September 2026 Sweden's Agency for Digital Government (Digg) issued a formal remark on accessibility deficiencies on the Equality Ombudsman's website do.se, following a review carried out between 29 April and 18 June 2026. The decision establishes that public authorities remain responsible for the accessibility of documents they link to from their sites.",
+    "category": "Rulings & Enforcement",
+    "jurisdiction": "Sweden",
+    "countryCode": "SE",
+    "date": "2026-09-29",
+    "sourceUrl": "https://webperf.se/articles/digg-myndigheter-ansvarar-for-lankade-dokument/",
+    "sourceName": "Webperf (reporting Digg decision)",
+    "id": "2026-09-29-swedish-regulator-digg-finds-accessibility-failin"
+  },
+  {
+    "title": "AgID reminds Italian public bodies to publish or update accessibility statements by 23 September",
+    "summary": "Italy's Agency for Digital Italy (AgID) published a notice requiring all public administrations to submit or update the accessibility statement for each of their websites and mobile applications by 23 September 2026, using AgID's online statement application.",
+    "category": "Regulatory Guidance",
+    "jurisdiction": "Italy",
+    "countryCode": "IT",
+    "date": "2026-09-16",
+    "sourceUrl": "https://www.agid.gov.it/it/notizie/dichiarazione-di-accessibilita-pubblicazione-o-aggiornamento-entro-il-23-settembre",
+    "sourceName": "AgID",
+    "id": "2026-09-16-agid-reminds-italian-public-bodies-to-publish-or-"
+  },
+  {
     "title": "W3C publishes updated WCAG 3.0 Working Draft for public review",
     "summary": "The W3C Accessibility Guidelines Working Group published a refreshed WCAG 3.0 Working Draft on 10 September 2026 and opened it for public review, with specific review questions on the proposed conformance model. WCAG 3.0 remains a draft and does not replace WCAG 2.2, which is the version referenced by the newly published EN 301 549 v4.1.1.",
     "category": "Standards Updates",
