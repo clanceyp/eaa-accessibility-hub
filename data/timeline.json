@@ -33,12 +33,28 @@
     "sourceName": "Legalithm"
   },
   {
+    "title": "National announcement deadline (doa) for EN 301 549 V4.1.1",
+    "detail": "EN 301 549 V4.1.1 sets 30 November 2026 as the date of latest announcement (doa) — the deadline by which national standards bodies in CEN/CENELEC/ETSI member countries must announce the new version at national level. It is the first step of the national rollout that continues with national publication/endorsement by 31 May 2027 and withdrawal of conflicting national standards by 31 May 2028, so testers should expect national versions of the V4.1.1 text to start appearing from this point.",
+    "date": "2026-11-30",
+    "sourceUrl": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
+    "sourceName": "ETSI — EN 301 549 V4.1.1 (2026-09)",
+    "id": "2026-11-30-national-announcement-deadline-doa-for-en-301-549"
+  },
+  {
     "id": "en301549-v411-published",
     "date": "2026-09-01",
     "title": "EN 301 549 V4.1.1 published",
     "detail": "Finalised version of EN 301 549, moving Clauses 9–11 to WCAG 2.2 AA. Not yet a cited harmonised standard under the EAA — see the expected Official Journal citation below. V3.2.1 (WCAG 2.1 AA) remains the version with legal effect until then.",
     "sourceUrl": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
     "sourceName": "ETSI"
+  },
+  {
+    "title": "EN 301 549 V4.1.1 adopted by the European Standards Organisations",
+    "detail": "The foreword of the published standard records 24 August 2026 as the date of adoption of EN 301 549 V4.1.1 by ETSI/CEN/CENELEC, the formal approval step that closed the V4.1.0 draft and vote process and fixed the text ahead of ETSI publication in September 2026. Adoption fixes the technical content (including the move to WCAG 2.2 AA, the new Annex ZB and clause A.2 for the European Accessibility Act) that conformance work should now be based on, even though legal presumption of conformity still depends on a later Official Journal citation.",
+    "date": "2026-08-24",
+    "sourceUrl": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
+    "sourceName": "ETSI — EN 301 549 V4.1.1 (2026-09)",
+    "id": "2026-08-24-en-301-549-v4-1-1-adopted-by-the-european-standar"
   },
   {
     "id": "en301549-v410-draft",
