@@ -54,7 +54,7 @@ content/                Markdown reference pages (EN 301 549 clauses,
 data/                   news.json, timeline.json — the two data files
                          the site reads; edited only via PR merge
 server/api/             news.get.ts, timeline.get.ts (data endpoints),
-                         cron/update-news.get.ts (nightly trigger)
+                         cron/update-news.get.ts (weekly trigger)
 scripts/                update-news.ts (CLI entry point) and
   pipeline/              the shared search -> extract -> diff -> PR
                          module used by both the CLI and the cron route
@@ -137,8 +137,8 @@ npm run update:timeline
 ```
 
 On Vercel, `/api/cron/update-news` runs the news pipeline, triggered
-nightly by the Vercel Cron job defined in `vercel.json` (`0 3 * * *`, i.e.
-03:00 UTC). The timeline pipeline has no scheduled trigger — timeline
+weekly by the Vercel Cron job defined in `vercel.json` (`0 3 * * 1`, i.e.
+Mondays at 03:00 UTC). The timeline pipeline has no scheduled trigger — timeline
 milestones are rare enough (new EN 301 549 versions, Official Journal
 citations, WAD/EAA deadlines) that `npm run update:timeline` is just run
 manually when needed. Also see the `/update-timeline` skill
@@ -182,7 +182,7 @@ needed — Vercel detects it and builds accordingly.
 
 | Variable | Used by | Notes |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | `/api/cron/update-news` | Claude API key for the nightly pipeline |
+| `ANTHROPIC_API_KEY` | `/api/cron/update-news` | Claude API key for the weekly pipeline |
 | `GITHUB_TOKEN` | `/api/cron/update-news` | Fine-grained PAT, this repo only, `Contents: Read and write` + `Pull requests: Read and write` |
 | `GITHUB_OWNER` | `/api/cron/update-news` | `clanceyp` |
 | `GITHUB_REPO` | `/api/cron/update-news` | `eaa-accessibility-hub` |
@@ -199,7 +199,7 @@ are only exercised when `/api/cron/update-news` actually fires.
 
 ```json
 {
-  "crons": [{ "path": "/api/cron/update-news", "schedule": "0 3 * * *" }]
+  "crons": [{ "path": "/api/cron/update-news", "schedule": "0 3 * * 1" }]
 }
 ```
 

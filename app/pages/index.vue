@@ -98,7 +98,7 @@ useSeoMeta({
 
       <div v-else class="card max-w-2xl">
         <p class="text-muted">
-          No entries yet. This list is populated by an automated nightly
+          No entries yet. This list is populated by an automated weekly
           search-and-summarise pipeline (see the project brief) that opens
           a pull request for review before anything is published here —
           that pipeline hasn't been built yet.

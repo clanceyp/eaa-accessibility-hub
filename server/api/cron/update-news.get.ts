@@ -3,7 +3,7 @@ import { newsConfig } from '../../../scripts/pipeline/news-config'
 import { loadPipelineEnv } from '../../../scripts/pipeline/env'
 
 /**
- * Triggered nightly by Vercel Cron (see vercel.json). Vercel sends
+ * Triggered weekly by Vercel Cron (see vercel.json). Vercel sends
  * `Authorization: Bearer $CRON_SECRET` on cron-triggered requests when
  * CRON_SECRET is set — reject anything else so this can't be hit publicly
  * to burn Claude API / GitHub API calls.

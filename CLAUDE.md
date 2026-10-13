@@ -84,8 +84,9 @@ Both `news.json` and `timeline.json` are updated by scripts that:
 5. Open a **pull request** to `main` via the GitHub API
 6. Patrick reviews and **merges manually** — nothing auto-publishes
 
-**`news.json`** — runs **nightly**, triggered by Vercel Cron (Hobby plan
-allows up to 2 cron jobs/project, once-per-day frequency — sufficient).
+**`news.json`** — runs **weekly** (Mondays, 03:00 UTC), triggered by
+Vercel Cron (Hobby plan allows up to 2 cron jobs/project, once-per-day
+frequency — sufficient for a weekly job).
 It can also be run manually via the `update-news` skill/CLI
 (`npm run update:news:local`), which works from a local git branch
 instead of the GitHub API and always opens a PR — even when no new
@@ -105,9 +106,9 @@ duplicating logic.
 - GitHub access via a **fine-grained Personal Access Token**, scoped to
   this repo only, with `Contents: Read and write` and
   `Pull requests: Read and write` — nothing else.
-- Token stored as `GITHUB_TOKEN` in Vercel env vars (for the nightly job)
-  and in a local `.env` file, **gitignored**, for the manual timeline
-  script. Never committed to the repo, never shared in chat/docs.
+- Token stored as `GITHUB_TOKEN` in Vercel env vars (for the weekly news
+  cron job) and in a local `.env` file, **gitignored**, for the manual
+  timeline script. Never committed to the repo, never shared in chat/docs.
 - Claude API key stored as `ANTHROPIC_API_KEY`, same handling.
 
 ## Explicitly out of scope for now
@@ -127,10 +128,10 @@ duplicating logic.
 - [x] Design direction / visual style — Tailwind v4, palette/type loosely
       based on etsi.org (navy/blue gradient, "Space Grotesk" self-hosted
       via `@nuxt/fonts`)
-- [ ] Exact list of source sites for the nightly news search — currently
+- [ ] Exact list of source sites for the weekly news search — currently
       left to the model's judgement (EU WAD monitoring/enforcement bodies,
       courts, ombudsman offices, EDF); tighten with named domains if the
-      nightly job surfaces too much noise or misses known sources
+      weekly job surfaces too much noise or misses known sources
 - [x] Whether `@nuxt/content` reads the JSON files directly or a simple
       `useFetch`/server route is used instead — server routes
       (`/api/news`, `/api/timeline`)

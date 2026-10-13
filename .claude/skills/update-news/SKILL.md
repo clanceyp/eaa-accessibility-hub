@@ -11,7 +11,7 @@ description: >-
 # Update news
 
 Runs this project's news-search pipeline manually, on a local branch, and
-always opens a PR from it — unlike the nightly Vercel cron job, which
+always opens a PR from it — unlike the weekly Vercel cron job, which
 writes `data/news-meta.json` straight to `main` and only opens a PR when
 it finds genuine new entries (see `scripts/pipeline/run-update.ts`,
 `runPipelineUpdate` vs `runPipelineUpdateLocal`). This manual path never
@@ -65,7 +65,7 @@ writes to `main` directly.
 - Never merge a PR automatically — every PR this pipeline opens needs a
   human review, per this project's design (see the root `CLAUDE.md`).
 - Never push directly to `main`.
-- This changes the *manual* run only. The nightly Vercel cron
+- This changes the *manual* run only. The weekly Vercel cron
   (`server/api/cron/update-news.get.ts`, still calling
   `runPipelineUpdate`) is unaffected — it still writes
   `data/news-meta.json` straight to `main` and only opens a PR for
