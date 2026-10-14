@@ -15,12 +15,18 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
+  "overrides": {
+    "@vercel/speed-insights": {
+      "vue-router": "$vue-router"
+    }
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.124.0",
     "@nuxt/fonts": "^0.14.0",
     "@octokit/rest": "^22.0.1",
     "@tailwindcss/vite": "^4.3.3",
     "@vercel/analytics": "^2.3.0-canary",
+    "@vercel/speed-insights": "^2.0.0",
     "better-sqlite3": "^13.0.3",
     "nuxt": "^4.5.2",
     "tailwindcss": "^4.3.3",
