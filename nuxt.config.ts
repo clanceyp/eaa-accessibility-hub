@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/eslint', '@vercel/analytics'],
+  modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/eslint', '@vercel/analytics/nuxt', '@vercel/speed-insights/nuxt'],
 
   css: ['~/assets/css/main.css'],
 
