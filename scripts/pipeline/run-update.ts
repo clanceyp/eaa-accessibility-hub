@@ -76,7 +76,7 @@ async function computeNewEntries<Draft, Entry extends { id: string; date: string
 /**
  * Reads/writes the repo's default branch via the GitHub API rather than a
  * local checkout, so it behaves identically whether run from a Vercel
- * serverless function (nightly cron) or a local CLI invocation. Writes
+ * serverless function (weekly cron) or a local CLI invocation. Writes
  * searchMetaFilePath straight to the default branch (bypassing PR review —
  * see PipelineConfig.searchMetaFilePath) and only opens a PR when genuine
  * new entries are found.

@@ -1,9 +1,9 @@
 # Trusted sources — `data/news.json` pipeline
 
 This is the source list referenced in `CLAUDE.md`'s open items ("exact
-list of source sites for the nightly news search — currently left to
+list of source sites for the weekly news search — currently left to
 the model's judgement"). It's a starting point for tightening
-`scripts/pipeline/news-config.ts`'s search prompt if the nightly job
+`scripts/pipeline/news-config.ts`'s search prompt if the weekly job
 surfaces too much noise or misses known sources — not a hard allowlist
 enforced in code today.
 
@@ -99,7 +99,7 @@ conformance.
 
 ## How to use this file
 
-If the nightly pipeline drifts (misses known enforcement actions, or
+If the weekly pipeline drifts (misses known enforcement actions, or
 surfaces off-topic "news"), tighten `userPrompt` in
 `scripts/pipeline/news-config.ts` to explicitly prioritise or restrict
 to domains from this list, then re-run `npm run update:news` locally

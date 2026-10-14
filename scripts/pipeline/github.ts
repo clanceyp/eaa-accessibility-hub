@@ -36,7 +36,7 @@ export interface OpenUpdatePrResult {
 
 /**
  * Writes a single file to a new branch via the Git Data API and opens a PR
- * to the repo's default branch. Used by both the nightly news job and the
+ * to the repo's default branch. Used by both the weekly news job and the
  * manual timeline job so nothing publishes without a human merging the PR.
  */
 export async function openUpdatePr(octokit: Octokit, opts: OpenUpdatePrOptions): Promise<OpenUpdatePrResult> {
