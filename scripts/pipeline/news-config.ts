@@ -1,6 +1,11 @@
 import type { PipelineConfig } from './run-update'
 import { slugId } from './run-update'
 import { type NewsDraft, type NewsEntry, newsDraftListSchema } from './schema'
+import { newsExcludedSources } from './excluded-sources'
+
+const excludedSourcesPromptNote = newsExcludedSources.length
+  ? `\nNever include results from these sources, regardless of how they're titled or framed - they're already known not to qualify:\n${newsExcludedSources.map((source) => `- anything from a URL containing "${source.urlContains}" (${source.reason})`).join('\n')}`
+  : ''
 
 const systemPrompt = `You are a research assistant for a reference site covering EN 301 549 —
 the European standard for digital accessibility referenced by the EU Web
@@ -53,7 +58,8 @@ Out of scope — do not include:
 Only include entries you can point to with a real, checkable source URL.
 If you are not confident something is genuine and in scope, leave it out
 rather than guessing. If an item could plausibly fit more than one
-category, pick the single best match.`
+category, pick the single best match.
+${excludedSourcesPromptNote}`
 
 const userPrompt = `Search for recent EN 301 549 ecosystem developments from the last 30 days
 across all of these categories:
@@ -111,5 +117,6 @@ export const newsConfig: PipelineConfig<NewsDraft, NewsEntry> = {
   userPrompt,
   idFromDraft: (draft) => slugId(draft.title, draft.date),
   toEntry: (draft, id) => ({ ...draft, id }),
-  searchMetaFilePath: 'data/news-meta.json'
+  searchMetaFilePath: 'data/news-meta.json',
+  excludedSources: newsExcludedSources
 }

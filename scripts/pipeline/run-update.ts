@@ -5,8 +5,9 @@ import type { z } from 'zod'
 import { searchAndExtract } from './search-and-extract'
 import { createGithubClient, getFileContent, openUpdatePr, writeFileDirectly } from './github'
 import { slugify, uniqueId } from './slugify'
+import type { ExcludedSource } from './excluded-sources'
 
-export interface PipelineConfig<Draft, Entry extends { id: string; date: string; title: string }> {
+export interface PipelineConfig<Draft extends { sourceUrl: string }, Entry extends { id: string; date: string; title: string }> {
   /** Short lowercase name used in branch names and log output, e.g. "news" */
   name: string
   /** Repo-relative path to the JSON data file this job maintains, e.g. "data/news.json" */
@@ -24,6 +25,12 @@ export interface PipelineConfig<Draft, Entry extends { id: string; date: string;
    * operational metadata (when did we last search), not editorial content.
    */
   searchMetaFilePath?: string
+  /**
+   * Sources to drop from the search results before they ever become
+   * candidate entries, regardless of what the model proposed — see
+   * excluded-sources.ts for why each one is listed.
+   */
+  excludedSources?: ExcludedSource[]
 }
 
 export interface PipelineResult {
@@ -45,7 +52,7 @@ interface ComputedEntries<Entry> {
 }
 
 /** Runs the search + dedupe step shared by both the remote and local pipelines. */
-async function computeNewEntries<Draft, Entry extends { id: string; date: string; title: string }>(
+async function computeNewEntries<Draft extends { sourceUrl: string }, Entry extends { id: string; date: string; title: string }>(
   config: PipelineConfig<Draft, Entry>,
   env: PipelineEnv,
   existingEntries: Entry[]
@@ -61,8 +68,19 @@ async function computeNewEntries<Draft, Entry extends { id: string; date: string
     existingIds: [...existingIds]
   })
 
+  const keptDrafts = drafts.filter((draft) => {
+    const excluded = config.excludedSources?.find((source) =>
+      draft.sourceUrl.toLowerCase().includes(source.urlContains.toLowerCase())
+    )
+    if (excluded) {
+      console.log(`[${config.name}] Excluded "${draft.sourceUrl}" — ${excluded.reason}`)
+      return false
+    }
+    return true
+  })
+
   const newEntries: Entry[] = []
-  for (const draft of drafts) {
+  for (const draft of keptDrafts) {
     const baseId = config.idFromDraft(draft)
     const id = uniqueId(baseId, existingIds)
     existingIds.add(id)
@@ -81,7 +99,7 @@ async function computeNewEntries<Draft, Entry extends { id: string; date: string
  * see PipelineConfig.searchMetaFilePath) and only opens a PR when genuine
  * new entries are found.
  */
-export async function runPipelineUpdate<Draft, Entry extends { id: string; date: string; title: string }>(
+export async function runPipelineUpdate<Draft extends { sourceUrl: string }, Entry extends { id: string; date: string; title: string }>(
   config: PipelineConfig<Draft, Entry>,
   env: PipelineEnv
 ): Promise<PipelineResult> {
@@ -143,7 +161,7 @@ export interface PipelineLocalResult<Entry> {
  * which is expected to do that from a branch it already created — this
  * function never touches git.
  */
-export async function runPipelineUpdateLocal<Draft, Entry extends { id: string; date: string; title: string }>(
+export async function runPipelineUpdateLocal<Draft extends { sourceUrl: string }, Entry extends { id: string; date: string; title: string }>(
   config: PipelineConfig<Draft, Entry>,
   env: PipelineEnv,
   repoRoot: string
