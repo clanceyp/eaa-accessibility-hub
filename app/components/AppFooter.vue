@@ -48,15 +48,15 @@ const lastUpdated = computed(() => {
           title="RSS Feed"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 11a9 9 0 0 1 9 9"></path>
-            <path d="M4 4a16 16 0 0 1 16 16"></path>
-            <circle cx="5" cy="19" r="1"></circle>
+            <path d="M0 10.5a13.5 13.5 0 0 1 13.5 13.5"></path>
+            <path d="M0 0a24 24 0 0 1 24 24"></path>
+            <circle cx="1.5" cy="22.5" r="1.5"></circle>
           </svg>
         </a>
       </div>
 
       <nav aria-labelledby="footer-site-heading">
-        <p id="footer-site-heading" class="text-base font-bold text-white">
+        <p id="footer-site-heading" class="text-base font-bold text-white uppercase tracking-wide">
           Site
         </p>
         <ul class="mt-3 space-y-2 text-sm">
@@ -81,7 +81,7 @@ const lastUpdated = computed(() => {
       </nav>
 
       <nav aria-labelledby="footer-legal-heading">
-        <p id="footer-legal-heading" class="text-base font-bold text-white">
+        <p id="footer-legal-heading" class="text-base font-bold text-white uppercase tracking-wide">
           Legal
         </p>
         <ul class="mt-3 space-y-2 text-sm">
