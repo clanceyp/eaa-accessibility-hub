@@ -65,7 +65,7 @@ const lastUpdated = computed(() => {
             </ul>
           </li>
           <li><NuxtLink to="/timeline" class="text-white no-underline hover:underline">Timeline</NuxtLink></li>
-
+          <li><a href="/feed.xml" class="text-white no-underline hover:underline">RSS Feed</a></li>
         </ul>
       </nav>
 

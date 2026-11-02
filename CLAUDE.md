@@ -29,6 +29,7 @@ needed to serve static pages.
 | `/accessibility-statement` | Accessibility Statement |
 | `/terms` | Terms & Conditions |
 | `/privacy` | Privacy Policy |
+| `/feed.xml` | RSS 2.0 feed combining `data/news.json` and `data/timeline.json`, newest first |
 
 ## Data files
 
