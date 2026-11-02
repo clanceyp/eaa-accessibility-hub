@@ -47,10 +47,12 @@ const lastUpdated = computed(() => {
           aria-label="Subscribe to the RSS feed"
           title="RSS Feed"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 10.5a13.5 13.5 0 0 1 13.5 13.5"></path>
-            <path d="M0 0a24 24 0 0 1 24 24"></path>
-            <circle cx="1.5" cy="22.5" r="1.5"></circle>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" viewBox="0 0 668 663">
+            <g fill="none" stroke="currentColor" stroke-width="106" stroke-linecap="round">
+              <path d="M95 302 A273 273 0 0 1 366 573"></path>
+              <path d="M95 84 A489 489 0 0 1 584 573"></path>
+            </g>
+            <circle cx="127" cy="542" r="84" fill="currentColor"></circle>
           </svg>
         </a>
       </div>
