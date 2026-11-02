@@ -38,16 +38,16 @@ const lastUpdated = computed(() => {
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" class="inline-block" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </p>
-        <p v-if="lastUpdated" class="mt-3 text-xs text-white/50">
+        <p v-if="lastUpdated" class="mt-3 text-sm text-white/50">
           Last updated: <time :datetime="lastUpdated.iso">{{ lastUpdated.formatted }}</time>
         </p>
         <a
           href="/feed.xml"
-          class="mt-3 inline-flex items-center justify-center rounded p-1 text-white/70 hover:text-white"
+          class="mt-3 inline-flex items-center justify-center text-white/70 hover:text-white"
           aria-label="Subscribe to the RSS feed"
           title="RSS Feed"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 11a9 9 0 0 1 9 9"></path>
             <path d="M4 4a16 16 0 0 1 16 16"></path>
             <circle cx="5" cy="19" r="1"></circle>
@@ -56,7 +56,7 @@ const lastUpdated = computed(() => {
       </div>
 
       <nav aria-label="Site">
-        <p class="text-sm font-medium text-white/60">
+        <p class="text-base font-medium text-white/60">
           Site
         </p>
         <ul class="mt-3 space-y-2 text-sm">
@@ -81,7 +81,7 @@ const lastUpdated = computed(() => {
       </nav>
 
       <nav aria-label="Legal">
-        <p class="text-sm font-medium text-white/60">
+        <p class="text-base font-medium text-white/60">
           Legal
         </p>
         <ul class="mt-3 space-y-2 text-sm">
