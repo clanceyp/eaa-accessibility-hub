@@ -55,8 +55,8 @@ const lastUpdated = computed(() => {
         </a>
       </div>
 
-      <nav aria-label="Site">
-        <p class="text-base font-medium text-white/60">
+      <nav aria-labelledby="footer-site-heading">
+        <p id="footer-site-heading" class="text-base font-bold text-white">
           Site
         </p>
         <ul class="mt-3 space-y-2 text-sm">
@@ -80,8 +80,8 @@ const lastUpdated = computed(() => {
         </ul>
       </nav>
 
-      <nav aria-label="Legal">
-        <p class="text-base font-medium text-white/60">
+      <nav aria-labelledby="footer-legal-heading">
+        <p id="footer-legal-heading" class="text-base font-bold text-white">
           Legal
         </p>
         <ul class="mt-3 space-y-2 text-sm">
