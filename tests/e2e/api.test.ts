@@ -63,6 +63,28 @@ describe('API routes', async () => {
     }
   })
 
+  it('GET /feed.xml lists news and timeline entries as valid, date-descending RSS items', async () => {
+    // ofetch's content-type sniffing only treats a handful of types as text
+    // (application/xml among them, but not application/rss+xml), so without
+    // this it parses the response as a Blob instead of a string.
+    const xml = await $fetch<string>('/feed.xml', { responseType: 'text' })
+
+    expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
+    expect(xml).toContain('<rss version="2.0"')
+    expect(xml).toContain('<atom:link href="https://eaaa11yhub.eu/feed.xml" rel="self" type="application/rss+xml" />')
+
+    const itemCount = [...xml.matchAll(/<item>/g)].length
+    expect(itemCount).toBeGreaterThan(0)
+
+    const pubDates = [...xml.matchAll(/<pubDate>([^<]+)<\/pubDate>/g)].map((m) => new Date(m[1]!).getTime())
+    expect(pubDates.length).toBe(itemCount)
+    for (const time of pubDates) {
+      expect(Number.isNaN(time)).toBe(false)
+    }
+    const sorted = [...pubDates].sort((a, b) => b - a)
+    expect(pubDates).toEqual(sorted)
+  })
+
   it('renders the homepage with at least one news entry', async () => {
     const html = await $fetch<string>('/')
     expect(html).toContain('Latest EN 301 549 developments')

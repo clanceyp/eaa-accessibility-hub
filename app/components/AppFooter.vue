@@ -38,13 +38,27 @@ const lastUpdated = computed(() => {
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" class="inline-block" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </p>
-        <p v-if="lastUpdated" class="mt-3 text-xs text-white/50">
+        <p v-if="lastUpdated" class="mt-3 text-sm text-white/50">
           Last updated: <time :datetime="lastUpdated.iso">{{ lastUpdated.formatted }}</time>
         </p>
+        <a
+          href="/feed.xml"
+          class="mt-3 inline-flex items-center justify-center text-white/70 hover:text-white"
+          aria-label="Subscribe to the RSS feed"
+          title="RSS Feed"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" viewBox="0 0 668 663">
+            <g fill="none" stroke="currentColor" stroke-width="106" stroke-linecap="round">
+              <path d="M95 302 A273 273 0 0 1 366 573"></path>
+              <path d="M95 84 A489 489 0 0 1 584 573"></path>
+            </g>
+            <circle cx="127" cy="542" r="84" fill="currentColor"></circle>
+          </svg>
+        </a>
       </div>
 
-      <nav aria-label="Site">
-        <p class="text-sm font-medium text-white/60">
+      <nav aria-labelledby="footer-site-heading">
+        <p id="footer-site-heading" class="text-base font-bold text-white uppercase tracking-wide">
           Site
         </p>
         <ul class="mt-3 space-y-2 text-sm">
@@ -65,12 +79,11 @@ const lastUpdated = computed(() => {
             </ul>
           </li>
           <li><NuxtLink to="/timeline" class="text-white no-underline hover:underline">Timeline</NuxtLink></li>
-
         </ul>
       </nav>
 
-      <nav aria-label="Legal">
-        <p class="text-sm font-medium text-white/60">
+      <nav aria-labelledby="footer-legal-heading">
+        <p id="footer-legal-heading" class="text-base font-bold text-white uppercase tracking-wide">
           Legal
         </p>
         <ul class="mt-3 space-y-2 text-sm">

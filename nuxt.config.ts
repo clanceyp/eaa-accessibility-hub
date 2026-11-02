@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import { SITE_NAME } from './shared/site'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -34,7 +35,8 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       link: [
-        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }
+        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+        { rel: 'alternate', type: 'application/rss+xml', title: `${SITE_NAME} - RSS Feed`, href: '/feed.xml' }
       ]
     }
   }
