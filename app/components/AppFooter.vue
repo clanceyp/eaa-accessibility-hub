@@ -41,6 +41,18 @@ const lastUpdated = computed(() => {
         <p v-if="lastUpdated" class="mt-3 text-xs text-white/50">
           Last updated: <time :datetime="lastUpdated.iso">{{ lastUpdated.formatted }}</time>
         </p>
+        <a
+          href="/feed.xml"
+          class="mt-3 inline-flex items-center justify-center rounded p-1 text-white/70 hover:text-white"
+          aria-label="Subscribe to the RSS feed"
+          title="RSS Feed"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
       </div>
 
       <nav aria-label="Site">
@@ -65,7 +77,6 @@ const lastUpdated = computed(() => {
             </ul>
           </li>
           <li><NuxtLink to="/timeline" class="text-white no-underline hover:underline">Timeline</NuxtLink></li>
-          <li><a href="/feed.xml" class="text-white no-underline hover:underline">RSS Feed</a></li>
         </ul>
       </nav>
 
